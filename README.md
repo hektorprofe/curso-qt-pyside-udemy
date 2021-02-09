@@ -1,159 +1,106 @@
 # Curso Qt/PySide
 
-## Tour inicial
-
-### Requisitos prévios
-
-- Python 3.8 o superior listo para trabajar.
-- Conocimientos de Python básico hasta las clases y objetos.
-- Saber manejar la terminal del sistema para ejecutar scripts.
-
-### Cuatro cosas sobre Qt, PySide y PyQt
-
-`Qt` es un framework ámpliamente utilizado para desarrollar programas con interfaces gráficas de usuario:
-
-- Está programado en C++, por tanto es muy rápido.
-- Es multiplataforma, funciona en diferentes sistema operativos.
-- Es orientado a objetos, fácil de empezar a utilizar y aprender.
-- Es software libre y código abierto, por tanto su uso es seguro.
-- Ofrece licencias públicas, permitiendo su uso de forma gratuita.
-
-`PySide` y `PyQt` son bindings o puentes que permiten utilizar Qt, programado en C++, a través de Python.
-
-PySide es el binding oficial desarrollado por `The Qt Company` con una licencia pública, en cambio PyQt está desarrollado por la firma `Riverbank Computing` y tiene una licencia comercial de $550.
-
-Antiguamente `PySide` estaba por detrás de `PyQt` en características, razón por la cuál se extendió el uso de la segunda alternativa, pero gracias al auge de Python y al apoyo de `The Qt Company`, la suite de `PySide` contiene todo lo necesario para desarrollar programas completos con Python con las ventajas de una licencia pública.
-
-### Equipo de pruebas y paquetes utilizados
-
-Este es el software utilizado durante el curso.
-
-- `Sistema operativo`: Windows 10
-- `Intérprete de Python`: Versión 3.9 instalada desde Microsoft Store
-- `Terminal`: Windows Terminal instalada desde la Microsoft Store
-- `Editor`: Visual Studio Code
-
-Sentíos libres de usar el sistema, intérprete 3.8 o superior, terminal y editor que vosotros prefiráis.
-
-En cuanto a los paquetes, estas son las versiones utilizadas:
-
-- `Pip`: (pip==21.0.1)
-- `PySide6`: (pyside==6.0.1)
-- `Auto PY to EXE`: (auto-py-to-exe==2.8.0)
-
-Siempre que estéis usando la versión 6 de Pyside deberíais poder realizar el curso sin problemas.
-
-Por último, a modo de recordatorio, para ejecutar algunos binarios, como `auto-py-to-exe`, si la terminal no lo detecta directamente se puede llamar escribiendo:
-
-```bash
-pip install auto-py-to-exe
-python -m auto_py_to_exe
-```
-
-## Tips
-
-### Encontrar el software de Qt
-
-Desde la terminal intentamos instalar Pyside6:
-
-```bash
-pip install pyside6
-```
-
-Esto dará la ruta al directorio, la copiamos y abrimos:
-
-```bash
-cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
-
-explorer .
-```
-
-Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
-
-- `designer.exe`: Diseñador de interfaces gráficas.
-- `linguist.exe`: Editor de ficheros de traducción.
-- `uic.exe`: Compilador de interfaces de usuario.
-- `rcc.exe`: Compilador de recursos.
-
-### Encontrar el intérprete
-
-Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
-
-```bash
-python
->>> import sys
->>> print(sys.path)
-```
-
-Copiamos la ruta a los `site-packages`, seleccionamos y clic derecho en la selección para copiar la ruta:
-
-```
-C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.496.0_x64__qbz5n2kfra8p0\\lib\\site-packages
-```
-
-Accedemos a ella (clic derecho en la línea de comandos para pegar), siendo administradores, y abrimos el explorador en ese directorio:
-
-```bash
-cd C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.496.0_x64__qbz5n2kfra8p0\\lib\\site-packages
-
-cd ../..
-
-explorer .
-```
-
-Ahí tenemos el ejecutable de Python del sistema.
-
 ## Índice del curso
 
-El curso tiene dos bloques independientes para separar el aprendizaje de Pyside y luego el desarrollo de diferentes programas. Mi intención es extender el en el segundo bloque enseñando a crear una colección de diferentes programas.
+El curso tiene dos bloques independientes para separar el aprendizaje de Pyside y el desarrollo de diferentes programas. Mi intención es extender el segundo bloque y con el tiempo crear colección de programas de ejemplo.
+
+### 0: Preparación prévia
+
+- 0.1 Requisitos para tomar el curso
+- 0.2 Equipo de pruebas y versiones
+- 0.3 Tips
+  - 0.3.1 Intérprete de Python
+  - 0.3.2 Software de Qt
+  - 0.3.3 Extensiones de VSC
 
 ### 1: Aprendiendo PySide
 
 #### 1.1: Conceptos básicos
 
-- Primera aplicación
-- Signals y slots
-- Widgets
-- Main Window
-- Layouts
-- Actions
-- Dialogs
-- Windows
-- Events
+- 1.1.1 Qt, PySide y PyQt
+- 1.1.2 Primera aplicación
+- 1.1.3 Superclases y subclases
+- 1.1.4 Primera aplicación con POO
+- 1.1.5 Tamaño de los widgets
+- 1.1.6 Señales y receptores
 
-#### 1.2: Qt Designer
+#### 1.2: Tour de Widgets
 
-- Primer diseño
-- Compilación y uso
-- Sistema de recursos
+- 1.2.1 Etiqueta (QLabel)
+- 1.2.2 Imagen (QPixemap)
+- 1.2.3 Casilla (QCheckBox)
+- 1.2.4 Desplegable (QComboBox)
+- 1.2.5 Lista (QListWidget)
+- 1.2.6 Input de texto (QLineEdit)
+- 1.2.6 Input numérico (QSpinBox/QDoubleSpinBox)
+- 1.2.7 Slider (QSlider)
+- 1.2.8 Dial (QDial)
 
-#### 1.3: Temas y estilos
+#### 1.3: Disposiciones
 
-- Estilos
-- Paletas
-- Iconos
-- Estilos QSS
+- 1.3.1 Layout vertical y horizontal
+- 1.3.2 Layouts anidados
+- 1.3.3 Layout en cuadrícula
+- 1.3.4 Layout apilado
+- 1.3.5 Layout con pestañas
 
-#### 1.4: Arquitectura Modelo-Vista
+#### 1.4: Ventana principal
 
-- Arquitectura MVC
-- Modelos y vistas
-- Ejemplo práctico
+- 1.4.1 Barras de menú
+- 1.4.2 Barras de herramientas
+- 1.4.3 Barra de estado
+- 1.4.4 Docks flotantes
 
-#### 1.5: Ejecución concurrente
+#### 1.5: Tour de Diálogos
 
-- Visualizando un reloj (no se puede)
-- Hilos y procesos
-- Usando un thread pool
-- Implementando un reloj
+- 1.5.2 Diálogos de mensajes (QMessageBox)
+- 1.5.3 Diálogos de entrada de datos (QInputDialog con TextInput/IntInput/DoubleInput)
+- 1.5.4 Diálogos de selección de fuente y color (QFontDialog/QColorDialog)
+- 1.5.5 Diálogos de selección de fecha y hora (QTimeEdit/QDateEdit/QDateTimeEdit)
+- 1.5.6 Diálogos de ficheros (QFileDialog)
 
-#### 1.6: Empaquetado y distribución
+#### 1.6: Control de ventanas
 
-- Entornos con Pipenv
-- Empaquetado con fbs
-- Contexto de aplicación
-- Accediendo a los recursos
-- Generando un ejecutable
+- 1.6.1 Creación de ventanas
+- 1.6.2 Cierre de ventanas
+- 1.6.3 Ventanas persistentes
+- 1.6.4 Mostrar y ocultar ventanas
+- 1.6.5 Señales entre ventanas
+
+#### 1.7: Qt Designer
+
+- 1.7.1 Primer diseño
+- 1.7.2 Compilación y uso
+- 1.7.3 Sistema de recursos
+- 1.7.4 Recursos en Qt Designer
+
+#### 1.8 Arquitectura Modelo-Vista
+
+- 1.8.1 Arquitectura MVC
+- 1.8.2 Modelos y vistas
+- 1.8.3 Ejemplo práctico
+
+#### 1.9: Temas y estilos
+
+- 1.9.1 Estilos
+- 1.9.2 Paletas
+- 1.9.3 Iconos
+- 1.9.4 Estilos QSS
+
+#### 1.10: Ejecución concurrente
+
+- 1.8.1 Visualizando un reloj (no se puede)
+- 1.8.2 Hilos y procesos
+- 1.8.3 Usando un thread pool
+- 1.8.4 Implementando un reloj (se puede con hilos)
+
+#### 1.11: Empaquetado y distribución
+
+- 1.11.1 Entornos con Pipenv
+- 1.11.2 Empaquetado con fbs
+- 1.11.3 Contexto de aplicación
+- 1.11.4 Accediendo a los recursos
+- 1.11.5 Generando un ejecutable
 
 ### 2: Desarrollo de programas
 
