@@ -103,4 +103,63 @@ explorer .
 
 Ahí tenemos el ejecutable de Python del sistema.
 
-## Unidad 1:
+## Índice del curso
+
+El curso tiene dos bloques independientes para separar el aprendizaje de Pyside y luego el desarrollo de diferentes programas. Mi intención es extender el en el segundo bloque enseñando a crear una colección de diferentes programas.
+
+### 1: Aprendiendo PySide
+
+#### 1.1: Conceptos básicos
+
+- Primera aplicación
+- Signals y slots
+- Widgets
+- Main Window
+- Layouts
+- Actions
+- Dialogs
+- Windows
+- Events
+
+#### 1.2: Qt Designer
+
+- Primer diseño
+- Compilación y uso
+- Sistema de recursos
+
+#### 1.3: Temas y estilos
+
+- Estilos
+- Paletas
+- Iconos
+- Estilos QSS
+
+#### 1.4: Arquitectura Modelo-Vista
+
+- Arquitectura MVC
+- Modelos y vistas
+- Ejemplo práctico
+
+#### 1.5: Ejecución concurrente
+
+- Visualizando un reloj (no se puede)
+- Hilos y procesos
+- Usando un thread pool
+- Implementando un reloj
+
+#### 1.6: Empaquetado y distribución
+
+- Entornos con Pipenv
+- Empaquetado con fbs
+- Contexto de aplicación
+- Accediendo a los recursos
+- Generando un ejecutable
+
+### 2: Desarrollo de programas
+
+Primero desarrollar todo el bloque 1 en este primer impulso, luego veremos los programas.
+
+- ???
+- ???
+- ???
+- ???
