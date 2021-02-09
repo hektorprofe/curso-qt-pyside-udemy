@@ -32,31 +32,7 @@ pip install auto-py-to-exe
 python -m auto_py_to_exe
 ```
 
-## Tips
-
-### Encontrar el software de Qt
-
-Desde la terminal re/instalamos Pyside6:
-
-```bash
-pip install pyside6
-```
-
-Esto dará la ruta al directorio, la copiamos y abrimos:
-
-```bash
-cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
-
-explorer .
-```
-
-Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
-
-- `designer.exe`: Diseñador de interfaces gráficas.
-- `uic.exe`: Compilador de interfaces de usuario.
-- `rcc.exe`: Compilador de recursos.
-
-### Encontrar el intérprete de Python
+## Tip: Encontrar el intérprete de Python
 
 Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
 
@@ -84,26 +60,34 @@ explorer .
 
 Ahí tenemos el ejecutable de Python del sistema.
 
-### Extensiones de VSC
+## Tip: Encontrar el software de Qt
 
-En caso de que alguien quiera utilizar mi editor:
+Desde la terminal re/instalamos Pyside6:
 
-- Extensión para ejecutar script pulsando F1 + Enter: `Code Runner`
-- Extensión para autoformatear código Python: `autopep8`
-- Extensión para detectar errores en Python: `pylint`
+```bash
+pip install pyside6
+```
 
-## Qt, PySide y PyQt
+Esto dará la ruta al directorio, la copiamos y abrimos:
 
-`Qt` es un framework ámpliamente utilizado para desarrollar programas con interfaces gráficas de usuario:
+```bash
+cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
 
-- Está programado en C++, por tanto es muy rápido.
-- Es multiplataforma, funciona en diferentes sistema operativos.
-- Es orientado a objetos, fácil de empezar a utilizar y aprender.
-- Es software libre y código abierto, por tanto su uso es seguro.
-- Ofrece licencias públicas, permitiendo su uso de forma gratuita.
+explorer .
+```
 
-`PySide` y `PyQt` son bindings o puentes que permiten utilizar Qt, programado en C++, a través de Python.
+Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
 
-PySide es el binding oficial desarrollado por `The Qt Company` con una licencia pública, en cambio PyQt está desarrollado por la firma `Riverbank Computing` y tiene una licencia comercial de $550.
+- `designer.exe`: Diseñador de interfaces gráficas.
+- `uic.exe`: Compilador de interfaces de usuario.
+- `rcc.exe`: Compilador de recursos.
 
-Antiguamente `PySide` estaba por detrás de `PyQt` en características, razón por la cuál se extendió el uso de la segunda alternativa, pero gracias al auge de Python y al apoyo de `The Qt Company`, la suite de `PySide` contiene todo lo necesario para desarrollar programas completos con Python con las ventajas de una licencia pública.
+## Tip: Extensiones de VSC
+
+En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
+
+- `autopep8` para autoformatear código Python (automática)
+- `pylint` para detectar errores en Python (automática)
+- `Code Runner` para ejecutar script pulsando F1 + Enter
+- `FiraCode` como fuente con las ligatures activadas
+- `Monokai Pro` para temas visualmente agradables

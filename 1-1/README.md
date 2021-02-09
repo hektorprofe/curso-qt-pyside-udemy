@@ -1,23 +1,29 @@
 # 1.1 Conceptos básicos
 
-- 1.1.1 Primera aplicación
-- 1.1.2 Superclases y subclases
-- 1.1.3 Primera aplicación con POO
-- 1.1.4 Tamaño de los widgets
-- 1.1.5 Señales y receptores
+- 1.1.1 Qt, PySide y PyQt
+- 1.1.2 Primera aplicación
+- 1.1.3 Superclases y subclases
+- 1.1.4 Primera aplicación con POO
+- 1.1.5 Tamaño de los widgets
+- 1.1.6 Señales y receptores
 
-- Layouts
+## 1.1.1 Qt, PySide y PyQt
 
-- Ventana principal
-- Barras de menú
-- Barras de herramientas
-- Docks flotantes
-- Acciones
-- Diálogos
-- Subventanas
-- Eventos
+`Qt` es un framework ámpliamente utilizado para desarrollar programas con interfaces gráficas de usuario:
 
-## 1.1.1 Primera aplicación
+- Está programado en C++, por tanto es muy rápido.
+- Es multiplataforma, funciona en diferentes sistema operativos.
+- Es orientado a objetos, fácil de empezar a utilizar y aprender.
+- Es software libre y código abierto, por tanto su uso es seguro.
+- Ofrece licencias públicas, permitiendo su uso de forma gratuita.
+
+`PySide` y `PyQt` son bindings o puentes que permiten utilizar Qt, programado en C++, a través de Python.
+
+PySide es el binding oficial desarrollado por `The Qt Company` con una licencia pública, en cambio PyQt está desarrollado por la firma `Riverbank Computing` y tiene una licencia comercial de $550.
+
+Antiguamente `PySide` estaba por detrás de `PyQt` en características, razón por la cuál se extendió el uso de la segunda alternativa, pero gracias al auge de Python y al apoyo de `The Qt Company`, la suite de `PySide` contiene todo lo necesario para desarrollar programas completos con Python con las ventajas de una licencia pública.
+
+## 1.1.2 Primera aplicación
 
 Estructura básica de un programa en PySide usando el componente base de Qt llamado `QWidget`, un widget vacío:
 
@@ -103,7 +109,7 @@ window.show()
 sys.exit(app.exec_())
 ```
 
-## 1.1.2 Superclases y subclases
+## 1.1.3 Superclases y subclases
 
 En la próxima lección vamos a transformar el código de nuestro programa a clases y objetos. Para hacerlo necesitaremos trabajar con la herencia de clases, así que repasemos un poco los conceptos básicos.
 
@@ -201,7 +207,7 @@ class Hijo(Madre, Padre):
 
 Con esto queda repasado el concepto de herencia múltiple, necesario para extender los componentes de Pyside.
 
-## 1.1.3 Primera aplicación con POO
+## 1.1.4 Primera aplicación con POO
 
 ```python
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
@@ -245,7 +251,7 @@ if __name__ == "__main__":
 
 La clave es extender el funcionamiento del constructor de `QMainWindow`, pues al ejecutar `super().__init__()` heredamos su comportamiento. Desde ese momento la propia instancia `self` de nuestra clase `MainWindow` adquiere los métodos heredados como `setWindowTitle` y `setCentralWidget`.
 
-## 1.1.4 Tamaño de los widgets
+## 1.1.5 Tamaño de los widgets
 
 En Qt existe un objeto llamado `QSize` que podemos asignar a los widgets para controlar su tamaño. Toma un ancho y un alto en píxeles y se puede establecer como tamaño mínimo, máximo o fijo para un widget:
 
@@ -276,7 +282,7 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-## 1.1.5 Señales y receptores
+## 1.1.6 Señales y receptores
 
 Tenemos un botón en nuestro programa pero no hace nada.
 

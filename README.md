@@ -8,10 +8,9 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 - 0.1 Requisitos para tomar el curso
 - 0.2 Equipo de pruebas y versiones
-- 0.3 Tips
-  - 0.3.1 Intérprete de Python
-  - 0.3.2 Software de Qt
-  - 0.3.3 Extensiones de VSC
+- 0.3 Tip: Intérprete de Python
+- 0.4 Tip: Software de Qt
+- 0.5 Tip: Extensiones de VSC
 
 ### 1: Aprendiendo PySide
 
@@ -67,7 +66,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.6.4 Mostrar y ocultar ventanas
 - 1.6.5 Señales entre ventanas
 
-#### 1.7: Qt Designer
+#### 1.7: Qt Designer y la arquitecura
 
 - 1.7.1 Primer diseño
 - 1.7.2 Compilación y uso
@@ -89,10 +88,10 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 #### 1.10: Ejecución concurrente
 
-- 1.8.1 Visualizando un reloj (no se puede)
-- 1.8.2 Hilos y procesos
-- 1.8.3 Usando un thread pool
-- 1.8.4 Implementando un reloj (se puede con hilos)
+- 1.10.1 Visualizando un reloj (no se puede)
+- 1.10.2 Hilos y procesos
+- 1.10.3 Usando un thread pool
+- 1.10.4 Implementando un reloj (se puede con hilos)
 
 #### 1.11: Empaquetado y distribución
 
