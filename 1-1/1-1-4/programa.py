@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
 # Si ejecutamos el propio script como programa principal
 if __name__ == "__main__":
     # Creamos la aplicación
-    app = QApplication()
+    app = QApplication(sys.argv)
     # Creamos nuestra ventana principal
     window = MainWindow()
     # Mostramos la ventana

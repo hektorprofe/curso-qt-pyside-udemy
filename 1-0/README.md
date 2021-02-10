@@ -1,12 +1,12 @@
-# Preparación prévia
+# # 1.0 Preparación prévia
 
-## Requisitos para tomar el curso
+## 1.0.1 Requisitos para tomar el curso
 
 - Python 3.8 o superior listo para trabajar.
 - Conocimientos de Python básico hasta las clases y objetos.
 - Saber manejar la terminal del sistema para ejecutar scripts.
 
-## Equipo de pruebas y versiones
+## 1.0.2 Equipo de pruebas y versiones
 
 Este es el software utilizado durante el curso.
 
@@ -32,7 +32,7 @@ pip install auto-py-to-exe
 python -m auto_py_to_exe
 ```
 
-## Tip: Encontrar el intérprete de Python
+## 1.0.3 Tip: Encontrar el intérprete de Python
 
 Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
 
@@ -60,7 +60,7 @@ explorer .
 
 Ahí tenemos el ejecutable de Python del sistema.
 
-## Tip: Encontrar el software de Qt
+## 1.0.4 Tip: Encontrar el software de Qt
 
 Desde la terminal re/instalamos Pyside6:
 
@@ -82,7 +82,7 @@ Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontr
 - `uic.exe`: Compilador de interfaces de usuario.
 - `rcc.exe`: Compilador de recursos.
 
-## Tip: Extensiones de VSC
+## 1.0.5 Tip: Extensiones de VSC
 
 En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
 

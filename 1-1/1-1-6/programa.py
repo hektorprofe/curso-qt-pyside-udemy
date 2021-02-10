@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication()
+    app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())

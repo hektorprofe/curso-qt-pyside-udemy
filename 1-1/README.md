@@ -3,9 +3,10 @@
 - 1.1.1 Qt, PySide y PyQt
 - 1.1.2 Primera aplicación
 - 1.1.3 Superclases y subclases
-- 1.1.4 Primera aplicación con POO
+- 1.1.4 Lo mismo usando POO
 - 1.1.5 Tamaño de los widgets
 - 1.1.6 Señales y receptores
+- 1.1.7 Componentes manipulables
 
 ## 1.1.1 Qt, PySide y PyQt
 
@@ -207,7 +208,7 @@ class Hijo(Madre, Padre):
 
 Con esto queda repasado el concepto de herencia múltiple, necesario para extender los componentes de Pyside.
 
-## 1.1.4 Primera aplicación con POO
+## 1.1.4 Lo mismo usando POO
 
 ```python
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
@@ -240,7 +241,7 @@ class MainWindow(QMainWindow):
 # Si ejecutamos el propio script como programa principal
 if __name__ == "__main__":
     # Creamos la aplicación
-    app = QApplication()
+    app = QApplication(sys.argv)
     # Creamos nuestra ventana principal
     window = MainWindow()
     # Mostramos la ventana
@@ -276,7 +277,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication()
+    app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
@@ -324,3 +325,63 @@ def boton_alternador(self, valor):
 ```
 
 Con esto os podéis hacer una idea de cómo las señales están pendientes de todo lo que ocurre sobre los widgets para permitirnos actuar en consecuencia.
+
+## 1.1.7 Componentes manipulables
+
+Para acabar esta introducción vamos a ver cómo manipular un widget.
+
+Si deseamos acceder a un widget desde un método es tan sencillo como almacenar un acceso a ese widget en la propia instancia, es decir, usar un atributo de clase:
+
+```python
+# me gusta crear los accesos alfinal
+self.button = button
+```
+
+Una vez contamos con el accesor, o mejor llamado puntero, podemos hacer referencia a cualquier instancia de un widget para modificarla a voluntad:
+
+```python
+def boton_alternador(self, valor):
+    if valor:
+        self.button.setText("Estoy activado")
+    else:
+        self.button.setText("Estoy desactivado")
+```
+
+Hagamos un último ejemplo usando otro componente:
+
+```python
+from PySide6.QtWidgets import QApplication, QMainWindow, QLineEdit  # editado
+from PySide6.QtCore import QSize
+import sys
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Hola mundo")
+        self.setMinimumSize(QSize(480, 320))
+
+        # widget input de texto
+        texto = QLineEdit()
+        # capturamos la señal de texto cambiado
+        texto.textChanged.connect(self.texto_modificado)
+
+        # establecemos el widget central
+        self.setCentralWidget(texto)
+
+        # creamos el puntero
+        self.texto = texto
+
+    def texto_modificado(self):
+        # recuperasmo el texto del input
+        texto_recuperado = self.texto.text()
+        # modificamos el título de la ventana al vuelo
+        self.setWindowTitle(texto_recuperado)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
