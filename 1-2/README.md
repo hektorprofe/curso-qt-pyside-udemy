@@ -1,13 +1,13 @@
 # 1.2: Widgets para formularios
 
-- 1.2.1 Etiqueta (QLabel)
-- 1.2.2 Casilla (QCheckBox)
-- 1.2.3 Desplegable (QComboBox)
-- 1.2.4 Lista (QListWidget)
-- 1.2.5 Campo de texto (QLineEdit)
-- 1.2.6 Campos numéricos (QSpinBox/QDoubleSpinBox)
+- 1.2.1 Etiquetas
+- 1.2.2 Casillas
+- 1.2.3 Desplegables
+- 1.2.4 Listas
+- 1.2.5 Campos de texto
+- 1.2.6 Campos numéricos
 
-## 1.2.1 Etiqueta (QLabel)
+## 1.2.1 Etiquetas
 
 Empezamos este tour con las etiquetas, uno de los widgets más sencillos de Qt. Se trata de una pieza de texto que se puede posicionar en nuestra aplicación. Podemos asignar el texto al crearlas o mediante su método `setText()`:
 
@@ -113,7 +113,7 @@ Sea como sea nuestra imagen ya se muestra, pero si quisiéramos que se reescale 
 etiqueta.setScaledContents(True)
 ```
 
-## 1.2.2 Casilla (QCheckBox)
+## 1.2.2 Casillas
 
 Seguimos el tour viendo las casillas de verificación o checkboxes:
 
@@ -189,7 +189,7 @@ print("¿Activada?", casilla.isChecked())
 print("¿Neutra?", casilla.isTristate())
 ```
 
-## 1.2.3 Desplegable (QComboBox)
+## 1.2.3 Desplegables
 
 Los desplegables son listas de opciones de las cuales se pueden selecciona una única opción.
 
@@ -246,7 +246,7 @@ print("Índice actual ->", desplegable.currentIndex())
 print("Texto actual ->", desplegable.currentText())
 ```
 
-## 1.2.4 Lista (QListWidget)
+## 1.2.4 Listas
 
 Las listas son muy parecidas a los desplegables pero aquí las opciones no están ocultas ni hay ninguna activa por defecto. En lugar de índices manejan un tipo de valor llamado `QItem` y la señal de cambio aquí es `currentItemChanged`:
 
@@ -290,7 +290,7 @@ print(lista.currentItem())
 
 Como por defecto la lista no tiene nada seleccionado muestra `None`.
 
-## 1.2.5 Campo de texto (QLineEdit)
+## 1.2.5 Campos de texto
 
 Los campos de texto son los widgets que permiten capturar contenido escrito por el usuario:
 
@@ -336,7 +336,7 @@ def enter_presionado(self):
     print("Enter presionado, texto ->", texto)
 ```
 
-## 1.2.6 Campos numéricos (QSpinBox/QDoubleSpinBox)
+## 1.2.6 Campos numéricos
 
 A diferencia de los campos de texto, los numéricos fuerzan al usuario a escribir números y proveen métodos para su control. Encontramos para almacenar enteros y decimales, empecemos por los enteros:
 
@@ -378,17 +378,17 @@ if __name__ == "__main__":
 Los campos numéricos permiten establecer prefijos y sufijos, útiles para manejar monedas y medidas:
 
 ```python
-numero.setPrefix("$ ")
-numero.setSuffix(" €")
+numero.setPrefix("$")
+numero.setSuffix("%")
 ```
 
-En cuanto a los decimales son exactamente lo mismo utilizando el widget `QDoubleSpinBox`, pero estos fuerzan valores de tipo `double`:
+En cuanto a los decimales son exactamente lo mismo pero utilizando el widget `QDoubleSpinBox`:
 
 - `QSpinBox` -> `QDoubleSpinBox`
 - `numero = QSpinBox()` -> `numero = QDoubleSpinBox()`
 - `numero.setSingleStep(1)` -> `numero.setSingleStep(0.5)`
 
-En ambos widgets podemos establecer un valor por defecto con el método `setValue` o recuperarlo con `value`:
+En ambos widgets podemos establecer un valor por defecto con el método `setValue` y recuperarlo con `value`:
 
 ```python
 # Establecer y recuperar el valor
@@ -396,4 +396,4 @@ numero.setValue(3.14)
 print(numero.value())
 ```
 
-Con esto acaba el tour por los widgets básicos para formularios. Existen muchos otros widgets para realizar todo tipo de tarea, descubriremos algunos a lo largo del curso pero si queréis una referencia completa lo mejor es buscar en la [documentación de qt](https://doc.qt.io/qt-6/qwidget.html) las clases heredadas de `QWidget`.
+Con esto acaba el repaso de los widgets básicos para formularios. Existen muchos otros para realizar todo tipo de tareas. Descubriremos algunos de ellos a lo largo del curso, pero si queréis una referencia completa lo mejor es buscar en la [documentación de qt](https://doc.qt.io/qt-6/qwidget.html) las clases heredadas de `QWidget` y probar vosotros mismos.

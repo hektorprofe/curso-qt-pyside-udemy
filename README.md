@@ -24,33 +24,34 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ### 1.2: Widgets para formularios
 
-- 1.2.1 Etiqueta (QLabel)
-- 1.2.2 Casilla (QCheckBox)
-- 1.2.3 Desplegable (QComboBox)
-- 1.2.4 Lista (QListWidget)
-- 1.2.5 Campo de texto (QLineEdit)
-- 1.2.6 Campos numéricos (QSpinBox/QDoubleSpinBox)
+- 1.2.1 Etiquetas
+- 1.2.2 Casillas
+- 1.2.3 Desplegables
+- 1.2.4 Listas
+- 1.2.5 Campos de texto
+- 1.2.6 Campos numéricos
 
-### 1.3: Tipos de disposición
+### 1.3: Formas de organización
 
-- 1.3.1 Layout vertical y horizontal
-- 1.3.2 Layouts anidados
-- 1.3.3 Layout en cuadrícula
-- 1.3.4 Layout apilado
-- 1.3.5 Layout con pestañas
+- 1.3.1 Widget personalizado
+- 1.3.2 Layouts básicos
+- 1.3.3 Layouts anidados
+- 1.3.4 Layout en cuadrícula
+- 1.3.5 Layout apilado
+- 1.3.6 Layout con pestañas
 
-### 1.4: Tipos de diálogos
+### 1.4: Diálogos esenciales
 
-- 1.4.2 Diálogos de mensajes (QMessageBox)
-- 1.4.3 Diálogos de entrada de datos (QInputDialog con TextInput/IntInput/DoubleInput)
-- 1.4.4 Diálogos de selección de fuente y color (QFontDialog/QColorDialog)
-- 1.4.5 Diálogos de selección de fecha y hora (QTimeEdit/QDateEdit/QDateTimeEdit)
-- 1.4.6 Diálogos de ficheros (QFileDialog)
+- 1.4.1 Diálogos de mensajes (QMessageBox)
+- 1.4.2 Diálogos de entrada de datos (QInputDialog con TextInput/IntInput/DoubleInput)
+- 1.4.3 Diálogos de manejo de ficheros (QFileDialog)
+- 1.4.4 Diálogos de selección de fecha y hora (QTimeEdit/QDateEdit/QDateTimeEdit)
+- 1.4.5 Diálogos de selección de fuente y color (QFontDialog/QColorDialog)
 
 ### 1.5: Ventana principal
 
-- 1.5.1 Barras de menú
-- 1.5.2 Barras de herramientas
+- 1.5.1 Barra de menú
+- 1.5.2 Barra de herramientas
 - 1.5.3 Barra de estado
 - 1.5.4 Docks flotantes
 
@@ -82,12 +83,12 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.9.2 Modelos y vistas
 - 1.9.3 Ejemplo práctico
 
-### 1.10: Temas y estilos
+### 1.10: Tematización
 
 - 1.10.1 Estilos
 - 1.10.2 Paletas
 - 1.10.3 Iconos
-- 1.10.4 Estilos QSS
+- 1.10.4 QSS
 
 ### 1.11: Empaquetado y distribución
 
@@ -99,7 +100,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ## 2: Desarrollo de programas
 
-Primero desarrollar todo el bloque 1 en este primer impulso, luego veremos los programas.
+_Primero desarrollar todo el bloque 1 en este primer impulso, luego veremos los programas._
 
 - ???
 - ???
