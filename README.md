@@ -62,13 +62,10 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.6.2 Barra de herramientas
 - 1.6.3 Docks flotantes
 
-### 1.7: [Control de ventanas](1-7/)
+### 1.7: [Control de subventanas](1-7/)
 
-- 1.7.1 Creación de ventanas
-- 1.7.2 Cierre de ventanas
-- 1.7.3 Ventanas persistentes
-- 1.7.4 Mostrar y ocultar ventanas
-- 1.7.5 Señales entre ventanas
+- 1.7.1 Creación de subventanas
+- 1.7.2 Subventanas persistentes
 
 ### 1.8: [Tematización](1-8/)
 
