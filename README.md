@@ -40,13 +40,13 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.4.5 Layout apilado
 - 1.4.6 Layout con pestañas
 
-### 1.5: Diálogos predeterminados
+### 1.5: Cuadros de diálogo
 
-- 1.5.1 Diálogos de mensajes
-- 1.5.2 Diálogos de entrada de datos
-- 1.5.3 Diálogos de manejo de ficheros
-- 1.5.4 Diálogos de de fuente y color
-- 1.5.5 Diálogos de fecha y hora
+- 1.5.1 Diálogos personalizados
+- 1.5.2 Diálogos de mensaje
+- 1.5.3 Diálogos predeterminados
+- 1.5.4 Activando las traducciones
+- 1.5.5 Diálogos específicos
 
 ### 1.6: Ventana principal
 
@@ -79,7 +79,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ### 1.10: Distribución
 
-A fecha de realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
+A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
 
 - 1.10.1 Generando un ejecutable
 - 1.10.2 Accediendo a los recursos
