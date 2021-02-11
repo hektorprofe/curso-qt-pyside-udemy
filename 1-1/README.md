@@ -82,12 +82,15 @@ Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontr
 - `uic.exe`: Compilador de interfaces de usuario.
 - `rcc.exe`: Compilador de recursos.
 
-## 1.1.5 Tip: Extensiones de VSC
+## 1.1.5 Tip: Extensiones de VSC y demases
 
 En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
 
 - `autopep8` para autoformatear código Python (automática)
 - `pylint` para detectar errores en Python (automática)
 - `Code Runner` para ejecutar script pulsando F1 + Enter
-- `FiraCode` como fuente con las ligatures activadas
-- `Monokai Pro` para temas visualmente agradables
+
+Otras configuraciones interesantes:
+
+- Tema `Monokai Pro`
+- Fuente `FiraCode` con ligatures

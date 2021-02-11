@@ -344,7 +344,7 @@ def keyPressEvent(self, event):
     if indice < 0:
         indice = indice_maximo
 
-    # finalmenteestablecemos el nuevo índice
+    # finalmente establecemos el nuevo índice
     self.layout.setCurrentIndex(indice)
 
     # continuamos con el evento por defecto
