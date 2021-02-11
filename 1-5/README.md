@@ -3,8 +3,16 @@
 - 1.5.1 Diálogos personalizados
 - 1.5.2 Diálogos de mensaje
 - 1.5.3 Diálogos predeterminados
+  - 1.5.3.1 Mensaje de cuestión
+  - 1.5.3.2 Mensaje acerca de
+  - 1.5.3.3 Mensaje crítico
+  - 1.5.3.4 Mensaje informativo
+  - 1.5.3.5 Mensaje de aviso
 - 1.5.4 Activando las traducciones
 - 1.5.5 Diálogos específicos
+  - 1.5.5.1 Diálogos de fichero
+  - 1.5.5.2 Diálogos de entrada de datos
+  - 1.5.5.3 Diálogos de fuente y color
 
 ## 1.5.1 Diálogos personalizados
 
@@ -183,7 +191,7 @@ Os dejo documentación sobre los [botones](https://doc.qt.io/qt-6/qmessagebox.ht
 
 Por suerte no necesitamos crear diálogos todo el tiempo, Qt incluye diálogos predeterminados para realiar diferentes tareas:
 
-#### Cuestión
+### 1.5.3.1 Mensaje de cuestión
 
 ```python
 from PySide6.QtWidgets import (
@@ -218,7 +226,7 @@ if __name__ == "__main__":
 
 Traducir los diálogos predeterminados no es algo trivial, en la siguiente lección os enseñaré como activar el traductor, por ahora veamos otros ejemplos.
 
-#### Acerca de
+### 1.5.3.2 Mensaje acerca de
 
 Para mostrar información del programa o el autor:
 
@@ -234,7 +242,7 @@ Este diálogo toma por defecto el icono de la ventana, vamos a añadir uno de ej
 self.setWindowIcon(QIcon(abs_path("icon.png")))
 ```
 
-#### Crítico
+### 1.5.3.3 Mensaje crítico
 
 Este diálogo reproduce un sonido de error mientras muestra la ventana:
 
@@ -245,7 +253,7 @@ def boton_clicado(self):
     print(dialogo)
 ```
 
-#### Informativo
+### 1.5.3.4 Mensaje informativo
 
 Para mostrar información genérica:
 
@@ -255,7 +263,7 @@ def boton_clicado(self):
         self, "Diálogo informativo", "Esto es un texto informativo")
 ```
 
-#### Aviso
+### 1.5.3.5 Mensaje de aviso
 
 Para mostrar un aviso:
 
@@ -342,7 +350,7 @@ explorer .
 
 Vamos a acabar esta unidad viendo otros ejemplos de diálogos para usos específicos. Es importante tener en cuenta que es necesario activar las traducciones o los textos aparecerán en inglés.
 
-### Diálogos de fichero
+### 1.5.5.1 Diálogos de fichero
 
 Se utilizan para generar la ruta a un fichero usando el explorador, es decir, no afectan al fichero en sí y solo sirven para saber donde se encuentra un fichero, ya sea para abrirlo o para guardarlo:
 
@@ -363,7 +371,7 @@ fichero, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", ".")
 
 Este modo es muy útil porque si el fichero ya existe te avisa de que se va a sobreescribir.
 
-### Diálogos de entrada de datos
+### 1.5.5.2 Diálogos de entrada de datos
 
 Pensados para pedir un dato concreto al usuario:
 
@@ -389,7 +397,7 @@ if confirmado:
     print(color)
 ```
 
-### Diálogos de fuente y color
+### 1.5.5.3 Diálogos de fuente y color
 
 Estos tienen el objetivo de seleccionar fuentes del sistema y colores.
 

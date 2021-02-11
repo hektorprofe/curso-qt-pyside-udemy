@@ -10,7 +10,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Intérprete de Python
 - 1.1.4 Tip: Software de Qt
-- 1.1.5 Tip: Extensiones de VSC
+- 1.1.5 Tip: Extensiones de VSC y demases
 
 ### 1.2: [Conceptos básicos](1-2/)
 
@@ -45,8 +45,16 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.5.1 Diálogos personalizados
 - 1.5.2 Diálogos de mensaje
 - 1.5.3 Diálogos predeterminados
+  - 1.5.3.1 Mensaje de cuestión
+  - 1.5.3.2 Mensaje acerca de
+  - 1.5.3.3 Mensaje crítico
+  - 1.5.3.4 Mensaje informativo
+  - 1.5.3.5 Mensaje de aviso
 - 1.5.4 Activando las traducciones
 - 1.5.5 Diálogos específicos
+  - 1.5.5.1 Diálogos de fichero
+  - 1.5.5.2 Diálogos de entrada de datos
+  - 1.5.5.3 Diálogos de fuente y color
 
 ### 1.6: [Ventana principal](1-6/)
 
