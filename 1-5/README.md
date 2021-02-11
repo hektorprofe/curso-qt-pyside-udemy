@@ -239,7 +239,7 @@ def boton_clicado(self):
 Este diálogo toma por defecto el icono de la ventana, vamos a añadir uno de ejemplo para verlo, usaremos la función para generar rutas absolutas que os enseñé:
 
 ```python
-self.setWindowIcon(QIcon(abs_path("icon.png")))
+self.setWindowIcon(QIcon(absPath("icon.png")))
 ```
 
 ### 1.5.3.3 Mensaje crítico

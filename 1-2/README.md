@@ -283,6 +283,32 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
+Alternativamente, si no queremos complicarnos la vida podemos utilizar el método `resize` de la ventana:
+
+```python
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
+import sys
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Hola mundo")
+        button = QPushButton("Hola")
+        self.setCentralWidget(button)
+
+        # Redimensión simple
+        self.resize(480, 320)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+El inconveniente es que este método no da tanto juego como establecer las reglas independientes.
+
 ## 1.2.6 Señales y receptores
 
 Tenemos un botón en nuestro programa pero no hace nada.

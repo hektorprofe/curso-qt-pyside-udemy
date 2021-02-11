@@ -58,10 +58,9 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ### 1.6: [Ventana principal](1-6/)
 
-- 1.6.1 Barras de menú
-- 1.6.2 Barras de herramientas
-- 1.6.3 Barra de estado
-- 1.6.4 Docks flotantes
+- 1.6.1 Menús, acciones y estado
+- 1.6.2 Barra de herramientas
+- 1.6.3 Docks flotantes
 
 ### 1.7: [Control de ventanas](1-7/)
 
@@ -83,14 +82,13 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.9.1 Introducción práctica
 - 1.9.2 Compilación del diseño
 - 1.9.3 Añadiendo la lógica
-- 1.9.4 Sistema de recursos (en qt designer, hacer la compilación de recursos)
 
 ### 1.10: [Distribución](1-10/)
 
 A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
 
 - 1.10.1 Generando un ejecutable
-- 1.10.2 Accediendo a los recursos
+- 1.10.2 Recursos compilados
 
 ## 2: Desarrollo de programas
 

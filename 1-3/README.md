@@ -98,12 +98,12 @@ python programa.py
 Alternativamente podemos utilizar el módulo `Path` de Python para generar una ruta absoluta al recurso concreto a partir del script actual y solventar el problema para siempre. Os recomiendo crear una función como la siguiente para facilitar la reutilización:
 
 ```python
-def abs_path(file):
+def absPath(file):
     # Devuelve la ruta absoluta a un fichero desde el propio script
     return str(Path(__file__).parent.absolute() / file)
 
-print(abs_path("naturaleza.jpg"))
-imagen = QPixmap(abs_path("naturaleza.jpg"))
+print(absPath("naturaleza.jpg"))
+imagen = QPixmap(absPath("naturaleza.jpg"))
 ```
 
 Sea como sea nuestra imagen ya se muestra, pero si quisiéramos que se reescale junto al tamaño de la ventana deberíamos establecer el atributo `scaledContents` en `True`:

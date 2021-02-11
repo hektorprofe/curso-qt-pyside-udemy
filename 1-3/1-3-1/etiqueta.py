@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 
-def abs_path(file):
+def absPath(file):
     # Devuelve la ruta absoluta a un fichero desde el propio script
     return str(Path(__file__).parent.absolute() / file)
 
@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(etiqueta)
 
         # Creamos la imagen
-        imagen = QPixmap(abs_path("naturaleza.jpg"))
+        imagen = QPixmap(absPath("naturaleza.jpg"))
         # la asginamos a la etiqueta
         etiqueta.setPixmap(imagen)
         # hacemos que se escale con la ventana

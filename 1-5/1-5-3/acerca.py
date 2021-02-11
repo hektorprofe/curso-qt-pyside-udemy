@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 
-def abs_path(file):
+def absPath(file):
     return str(Path(__file__).parent.absolute() / file)
 
 
@@ -13,7 +13,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.resize(480, 320)
-        self.setWindowIcon(QIcon(abs_path("icon.png")))
+        self.setWindowIcon(QIcon(absPath("icon.png")))
 
         boton = QPushButton("Mostrar diálogo")
         boton.clicked.connect(self.boton_clicado)
