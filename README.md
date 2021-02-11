@@ -4,7 +4,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ## 1: Fundamentos de Qt/PySide
 
-### 1.1: [Preparación prévia](1-1/README.md)
+### 1.1: [Preparación prévia](1-1/)
 
 - 1.1.1 Requisitos para tomar el curso
 - 1.1.2 Equipo de pruebas y versiones

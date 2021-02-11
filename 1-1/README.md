@@ -1,4 +1,4 @@
-# # 1.1 Preparación prévia
+# 1.1 Preparación prévia
 
 ## 1.1.1 Requisitos para tomar el curso
 
