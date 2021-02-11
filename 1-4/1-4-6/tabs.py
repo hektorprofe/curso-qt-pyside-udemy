@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QLabel, QTabWidget)
-from PySide6.QtCore import Qt
 import sys
 
 
