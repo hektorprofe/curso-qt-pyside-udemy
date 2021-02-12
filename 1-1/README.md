@@ -1,5 +1,11 @@
 # 1.1 Preparación prévia
 
+- 1.1.1 Requisitos para tomar el curso
+- 1.1.2 Equipo de pruebas y versiones
+- 1.1.3 Tip: Extensiones de VSC y demases
+- 1.1.4 Tip: Encontrar el software de Qt
+- 1.1.5 Tip: Encontrar el intérprete de Python
+
 ## 1.1.1 Requisitos para tomar el curso
 
 - Python 3.8 o superior listo para trabajar.
@@ -32,7 +38,42 @@ pip install auto-py-to-exe
 python -m auto_py_to_exe
 ```
 
-## 1.1.3 Tip: Encontrar el intérprete de Python
+## 1.1.3 Tip: Extensiones de VSC y demases
+
+En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
+
+- `autopep8` para autoformatear código Python (automática)
+- `pylint` para detectar errores en Python (automática)
+- `Code Runner` para ejecutar script pulsando F1 + Enter
+
+Otras configuraciones interesantes:
+
+- Tema `Monokai Pro`
+- Fuente `FiraCode` con ligatures
+
+## 1.1.4 Tip: Encontrar el software de Qt
+
+Desde la terminal re/instalamos Pyside6:
+
+```bash
+pip install pyside6
+```
+
+Esto dará la ruta al directorio, la copiamos y abrimos:
+
+```bash
+cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
+
+explorer .
+```
+
+Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
+
+- `designer.exe`: Diseñador de interfaces gráficas.
+- `uic.exe`: Compilador de interfaces de usuario.
+- `rcc.exe`: Compilador de recursos.
+
+## 1.1.5 Tip: Encontrar el intérprete de Python
 
 Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
 
@@ -59,38 +100,3 @@ explorer .
 ```
 
 Ahí tenemos el ejecutable de Python del sistema.
-
-## 1.1.4 Tip: Encontrar el software de Qt
-
-Desde la terminal re/instalamos Pyside6:
-
-```bash
-pip install pyside6
-```
-
-Esto dará la ruta al directorio, la copiamos y abrimos:
-
-```bash
-cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
-
-explorer .
-```
-
-Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
-
-- `designer.exe`: Diseñador de interfaces gráficas.
-- `uic.exe`: Compilador de interfaces de usuario.
-- `rcc.exe`: Compilador de recursos.
-
-## 1.1.5 Tip: Extensiones de VSC y demases
-
-En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
-
-- `autopep8` para autoformatear código Python (automática)
-- `pylint` para detectar errores en Python (automática)
-- `Code Runner` para ejecutar script pulsando F1 + Enter
-
-Otras configuraciones interesantes:
-
-- Tema `Monokai Pro`
-- Fuente `FiraCode` con ligatures

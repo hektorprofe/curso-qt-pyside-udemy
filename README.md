@@ -8,9 +8,9 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 - 1.1.1 Requisitos para tomar el curso
 - 1.1.2 Equipo de pruebas y versiones
-- 1.1.3 Tip: Intérprete de Python
-- 1.1.4 Tip: Software de Qt
-- 1.1.5 Tip: Extensiones de VSC y demases
+- 1.1.3 Tip: Extensiones de VSC y demases
+- 1.1.4 Tip: Encontrar el software de Qt
+- 1.1.5 Tip: Encontrar el intérprete de Python
 
 ### 1.2: [Conceptos básicos](1-2/)
 
@@ -77,25 +77,22 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.8.4 Qt Style Sheets
 - 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Qt Creator](1-9/)
-
-- 1.9.1 Introducción práctica
-- 1.9.2 Compilación del diseño
-- 1.9.3 Añadiendo la lógica
-
-## 1.10: [Introducción a Quick/QML]
-
-QML ofrece un enfoque alternativo para crear interfaces de usuario, en comparación con los widgets, y originalmente fue motivado por el desarrollo de aplicaciones móviles. Junto con el módulo Qt Quick, brinda acceso para interactuar con el dispositivo móvil mediante acciones como toques, arrastrar y soltar, animaciones, estados, transiciones, menús de cajón, etc. Los elementos que puedes encontrar en las aplicaciones QML / Quick están enfocados a brindar una infraestructura de aplicaciones más dinámica con diferentes propiedades basadas en determinados comportamientos. Aunque QML tiene la motivación para proporcionar interfaces con dispositivos móviles, también puede usarlo para aplicaciones de escritorio. Además, puede aumentar su aplicación con JavaScript estándar, que en combinación con C ++ puede convertirse en una infraestructura atractiva.
-
-https://doc.qt.io/qtforpython/tutorials/index.html#quick-qml-basic-tutorials
-https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
-
-### 1.11: [Distribución](1-10/)
+### 1.9: [Distribución](1-10/)
 
 A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
 
-- 1.10.1 Generando un ejecutable
-- 1.10.2 Recursos compilados
+- 1.9.1 Generando un ejecutable
+- 1.9.2 Recursos compilados
+
+### 1.10: [Qt Creator](1-9/)
+
+- 1.10.1 Introducción práctica
+- 1.10.2 Compilación del diseño
+- 1.10.3 Añadiendo la lógica
+- 1.10.4 Quick QML
+
+  https://doc.qt.io/qtforpython/tutorials/index.html#quick-qml-basic-tutorials
+  https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
 
 ## 2: Desarrollo de programas
 
