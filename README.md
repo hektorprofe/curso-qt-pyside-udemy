@@ -26,10 +26,11 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 - 1.3.1 Etiquetas
 - 1.3.2 Casillas
-- 1.3.3 Desplegables
-- 1.3.4 Listas
-- 1.3.5 Campos de texto
-- 1.3.6 Campos numéricos
+- 1.3.3 Botones radiales
+- 1.3.4 Desplegables
+- 1.3.5 Listas
+- 1.3.6 Campos de texto
+- 1.3.7 Campos numéricos
 
 ### 1.4: [Formas de organización](1-4/)
 
@@ -37,8 +38,9 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.4.2 Layouts básicos
 - 1.4.3 Layouts anidados
 - 1.4.4 Layout en cuadrícula
-- 1.4.5 Layout apilado
-- 1.4.6 Layout con pestañas
+- 1.4.5 Layout en formulario
+- 1.4.6 Layout apilado
+- 1.4.7 Layout con pestañas
 
 ### 1.5: [Cuadros de diálogo](1-5/)
 
@@ -72,15 +74,23 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.8.1 Estilos
 - 1.8.2 Paletas
 - 1.8.3 Iconos
-- 1.8.4 QSS
+- 1.8.4 Qt Style Sheets
+- 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Qt Designer](1-9/)
+### 1.9: [Qt Creator](1-9/)
 
 - 1.9.1 Introducción práctica
 - 1.9.2 Compilación del diseño
 - 1.9.3 Añadiendo la lógica
 
-### 1.10: [Distribución](1-10/)
+## 1.10: [Introducción a Quick/QML]
+
+QML ofrece un enfoque alternativo para crear interfaces de usuario, en comparación con los widgets, y originalmente fue motivado por el desarrollo de aplicaciones móviles. Junto con el módulo Qt Quick, brinda acceso para interactuar con el dispositivo móvil mediante acciones como toques, arrastrar y soltar, animaciones, estados, transiciones, menús de cajón, etc. Los elementos que puedes encontrar en las aplicaciones QML / Quick están enfocados a brindar una infraestructura de aplicaciones más dinámica con diferentes propiedades basadas en determinados comportamientos. Aunque QML tiene la motivación para proporcionar interfaces con dispositivos móviles, también puede usarlo para aplicaciones de escritorio. Además, puede aumentar su aplicación con JavaScript estándar, que en combinación con C ++ puede convertirse en una infraestructura atractiva.
+
+https://doc.qt.io/qtforpython/tutorials/index.html#quick-qml-basic-tutorials
+https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
+
+### 1.11: [Distribución](1-10/)
 
 A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
 

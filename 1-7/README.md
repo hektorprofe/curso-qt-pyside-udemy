@@ -3,7 +3,7 @@
 - 1.7.1 Creación de subventanas
 - 1.7.2 Subventanas persistentes
 
-## 1.7.1 Creación de ventanas
+## 1.7.1 Creación de subventanas
 
 En esta lección vamos a ver cómo manejar ventanas secundarias. Para ello partiremos del siguiente programa:
 
@@ -74,7 +74,7 @@ def mostrar_subventana(self):
     self.subventana.show()
 ```
 
-## 1.7.2 Ventanas persistentes
+## 1.7.2 Subventanas persistentes
 
 En este punto es importante dejar claro que cada vez que presionamos el botón "mostrar subventana" se crea una nueva subventana que sobreescribe a la anterior, esto podemos comprobarlo generando un número aleatorio en la etiqueta:
 

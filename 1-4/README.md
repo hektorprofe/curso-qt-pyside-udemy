@@ -4,8 +4,9 @@
 - 1.4.2 Layouts básicos
 - 1.4.3 Layouts anidados
 - 1.4.4 Layout en cuadrícula
-- 1.4.5 Layout apilado
-- 1.4.6 Layout con pestañas
+- 1.4.5 Layout en formulario
+- 1.4.6 Layout apilado
+- 1.4.7 Layout con pestañas
 
 ## 1.4.1 Widget personalizado
 
@@ -258,7 +259,59 @@ for fila in range(5):
         cuadricula.addWidget(Caja(f"#{color[2:]}"), fila, columna)
 ```
 
-## 1.4.5 Layout apilado
+## 1.4.5 Layout en formulario
+
+Si lo que necesitamos es una estructura para manejar un formulario podemos usar un `QFormLayout` que nos permite añadir etiquetas y widgets en fila de una forma más cómoda que las cuadrículas:
+
+```python
+from PySide6.QtWidgets import (
+    QApplication, QMainWindow, QLabel, QFormLayout, QWidget)
+import sys
+
+
+class Caja(QLabel):
+    def __init__(self, color):
+        super().__init__()
+        self.setStyleSheet(f"background-color:{color}")
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        # creamos un layout en formulario
+        formulario = QFormLayout()
+
+        # añadimos widgets con etiquetas en filas
+        formulario.addRow("Campo 1", Caja("orange"))
+        formulario.addRow("Campo 2", Caja("purple"))
+        formulario.addRow("Campo 3", Caja("magenta"))
+        formulario.addRow("Campo 4", Caja("gray"))
+        formulario.addRow("Campo 5", Caja("red"))
+
+        # cremos el widget dummy y le asignamos el layout
+        widget = QWidget()
+        widget.setLayout(formulario)
+
+        self.setCentralWidget(widget)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+Dependiendo del sistema operativo el formulario se visualizará de forma diferente con el objetivo de respetar la integración, pero es posible cambiar la alineación de las etiquetas y los widgets manualmente:
+
+```python
+# configuraciones extra
+formulario.setLabelAlignment(Qt.AlignRight)
+formulario.setFormAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+```
+
+## 1.4.6 Layout apilado
 
 Otra disposición que da mucho juego es apilar los widgets usando un `QStackedLayout`:
 
@@ -353,7 +406,7 @@ def keyPressEvent(self, event):
 
 En este experimento hemos introducido los `eventos`, pero podríamos haber utilizado unos botones para cambiar de índice sin problema.
 
-## 1.4.6 Layout con pestañas
+## 1.4.7 Layout con pestañas
 
 El último tipo de disposición que veremos es con pestañas utilizando un `QTabWidget`, se trata de una variante del apilado con un control más visual. Esta variante sí hereda de la clase `QWidget` y por tanto no requiere un dummy widget:
 

@@ -2,7 +2,8 @@
 
 - 1.3.1 Etiquetas
 - 1.3.2 Casillas
-- 1.3.3 Desplegables
+- 1.3.3 Botons radiales
+- 1.3.4 Desplegables
 - 1.3.4 Listas
 - 1.3.5 Campos de texto
 - 1.3.6 Campos numéricos
@@ -189,7 +190,42 @@ print("¿Activada?", casilla.isChecked())
 print("¿Neutra?", casilla.isTristate())
 ```
 
-## 1.3.3 Desplegables
+## 1.3.3 Botones radiales
+
+Muy parecidas a las casillas son los botones radiales, sin embargo estos solo pueden marcarse o desmarcarse, no tienen estado neutro:
+
+```python
+from PySide6.QtWidgets import QApplication, QMainWindow, QRadioButton
+from PySide6.QtCore import QSize, Qt
+import sys
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        # creamos un botón radial y lo establecemos de widget central
+        radial = QRadioButton("Botón radial")
+        self.setCentralWidget(radial)
+
+        # señal para detectar cambios en el botón
+        radial.toggled.connect(self.estado_cambiado)
+
+        # Podemos activarla por defecto
+        radial.setChecked(True)
+
+        # consultamos el valor actual
+        print("¿Activada?", radial.isChecked())
+
+    def estado_cambiado(self, estado):
+        if estado:
+            print("Radial marcado")
+        else:
+            print("Radial desmarcado")
+
+```
+
+## 1.3.4 Desplegables
 
 Los desplegables son listas de opciones de las cuales se pueden selecciona una única opción.
 
@@ -210,13 +246,6 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(desplegable)
 
         desplegable.addItems(["Opción 1", "Opción 2", "Opción 3"])
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
 ```
 
 Dependiendo de si queremos consultar el índice o el valor al cambiar podemos usar una señal `currentTextChanged` o `currentIndexChanged`:
@@ -273,13 +302,6 @@ class MainWindow(QMainWindow):
     def item_cambiado(self, item):
         # Conseguimos el texto del ítem con su método text()
         print("Nuevo ítem ->", item.text())
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
 ```
 
 Y para conseguir el ítem actual utilizaremos:
@@ -311,13 +333,6 @@ class MainWindow(QMainWindow):
         # Probamos algunas opciones
         texto.setMaxLength(10)
         texto.setPlaceholderText("Escribe máximo 10 caracteres")
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
 ```
 
 Podemos probar algunas señales para practicar:
@@ -366,13 +381,6 @@ class MainWindow(QMainWindow):
     def valor_cambiado(self, numero):
         # al presionar enter recuperamos el texto a partir del widget central
         print("Valor cambiado ->", numero)
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
 ```
 
 Los campos numéricos permiten establecer prefijos y sufijos, útiles para manejar monedas y medidas:
