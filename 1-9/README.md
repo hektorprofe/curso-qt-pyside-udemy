@@ -1,8 +1,12 @@
-# 1.10 Qt Designer
+# 1.9 Diseño de interfaces en Qt Designer
 
-# 1.10.1 Primero diseño
+En esta unidad se da por hecho que se tiene en el path el designer, rcc y uic.
 
-# 1.10.2 Cargar el diseño
+- 1.9.1 Conceptos básicos de Qt Designer (layout, elementos, tamaños, expandir, recursos, experimentar...)
+- 1.9.2 Compilación y uso de interfaces con UIC
+- 1.9.3 Compilación y uso de recursos con RCC
+- 1.9.4 Manejo de subventanas compiladas
+- 1.9.5 Carga de interfaces sin compilar con QUiLoader
 
 <!-- # 1.10 Qt Creator
 

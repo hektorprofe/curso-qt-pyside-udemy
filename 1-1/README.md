@@ -3,7 +3,7 @@
 - 1.1.1 Requisitos para tomar el curso
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Extensiones de VSC y demases
-- 1.1.4 Tip: Encontrar el software de Qt
+- 1.1.4 Tip: Añadir el software de Qt al Path
 - 1.1.5 Tip: Encontrar el intérprete de Python
 
 ## 1.1.1 Requisitos para tomar el curso
@@ -51,7 +51,7 @@ Otras configuraciones interesantes:
 - Tema `Monokai Pro`
 - Fuente `FiraCode` con ligatures
 
-## 1.1.4 Tip: Encontrar el software de Qt
+## 1.1.4 Tip: Añadir el software de Qt al Path
 
 Desde la terminal re/instalamos Pyside6:
 
@@ -67,7 +67,26 @@ cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz
 explorer .
 ```
 
-Buscamos la carpeta `PySide6` y creamos un acceso directo a ella. Dentro encontramos:
+Buscamos la carpeta `PySide6`y dentro encontramos:
+
+- `designer.exe`: Diseñador de interfaces gráficas.
+- `uic.exe`: Compilador de interfaces de usuario.
+- `rcc.exe`: Compilador de recursos.
+
+Mi recomendación es añadir esta ruta al path del usuario para poder acceder cómodamente a al diseñador y las herramientas de compilación:
+
+1. Clic derecho en Inicio > Sistema
+2. Bajamos hasta encontrar "Configuración avanzada del sistema"
+3. Variables de enterno > Editar variables de usuario > Path > Nuevo
+4. Pegamos la carpeta de PySide6:
+
+```
+C:\Users\hcost\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\PySide6
+```
+
+Guardamos y reiniciamos las terminales y los editores.
+
+Ahora podemos ejecutar desde cualquier lugar los ejecutables:
 
 - `designer.exe`: Diseñador de interfaces gráficas.
 - `uic.exe`: Compilador de interfaces de usuario.

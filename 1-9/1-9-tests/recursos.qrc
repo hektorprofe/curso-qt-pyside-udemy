@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="data">
+    <file>recursos/info.png</file>
+    <file>recursos/fichero.png</file>
+  </qresource>
+</RCC>

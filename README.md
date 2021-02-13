@@ -9,7 +9,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.1.1 Requisitos para tomar el curso
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Extensiones de VSC y demases
-- 1.1.4 Tip: Encontrar el software de Qt
+- 1.1.4 Tip: Añadir el software de Qt al Path
 - 1.1.5 Tip: Encontrar el intérprete de Python
 
 ### 1.2: [Conceptos básicos](1-2/)
@@ -77,21 +77,28 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.8.4 Qt Style Sheets
 - 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Distribución](1-10/)
+### 1.9: [Diseño de interfaces en Qt Designer](1-9/)
+
+- 1.9.1 Conceptos básicos de Qt Designer
+- 1.9.2 Compilación y uso de interfaces con UIC
+- 1.9.3 Compilación y uso de recursos con RCC
+- 1.9.4 Manejo de subventanas compiladas
+- 1.9.5 Carga de interfaces sin compilar con QUiLoader
+
+### 1.10: [Distribución](1-10/)
 
 A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
 
-- 1.9.1 Generando un ejecutable
-- 1.9.2 Recursos compilados
+- 1.10.1 Generando un ejecutable
+- 1.10.2 Recursos compilados
 
-### 1.10: [Qt Creator](1-9/)
+### 1.11: Interfaces modernas con Qt Quick y QML
 
-- 1.10.1 Introducción práctica
-- 1.10.2 Compilación del diseño
-- 1.10.3 Añadiendo la lógica
-- 1.10.4 Quick QML
+Esto es interesante, copiar un poco el tutorial. que es QML y que es Qtick
 
-  https://doc.qt.io/qtforpython/tutorials/index.html#quick-qml-basic-tutorials
+- Que son QML y QT Quick
+- Primeros pasos https://www.youtube.com/watch?v=Jn0PpzB14Y8
+- tutorial completo con Qt Creator
   https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
 
 ## 2: Desarrollo de programas
