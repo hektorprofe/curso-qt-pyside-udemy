@@ -1,16 +1,18 @@
 # 1.1 Preparación prévia
 
-- 1.1.1 Requisitos para tomar el curso
+- 1.1.1 Requisitos recomendados
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Extensiones de VSC y demases
 - 1.1.4 Tip: Añadir el software de Qt al Path
 - 1.1.5 Tip: Encontrar el intérprete de Python
 
-## 1.1.1 Requisitos para tomar el curso
+## 1.1.1 Requisitos recomendados
 
-- Python 3.8 o superior listo para trabajar.
 - Conocimientos de Python básico hasta las clases y objetos.
 - Saber manejar la terminal del sistema para ejecutar scripts.
+- Python 3.8 o superior descargado de la web oficial `python.org` o con la versión de Miniconda/Anaconda añadidas al Path del sistema. No puedo asegurar el correcto funcionamiento de la herramienta `auto-py-to-exe` con versiones alternativas como las de la Store de Microsoft o del gestor de paquetes Chocolatey.
+
+Nota: Si el comando `python` no funciona en la terminal, pero sí lo hace `py`, hay que desactivar los alias del sitema. Inicio > Escribir "Alias", abrir la ventana y desactivar python.exe y python3.exe, esto sucede si instalas Python desde la Store.
 
 ## 1.1.2 Equipo de pruebas y versiones
 
@@ -62,7 +64,7 @@ pip install pyside6
 Esto dará la ruta al directorio, la copiamos y abrimos:
 
 ```bash
-cd c:\users\hcost\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages
+c:\users\hcost\appdata\local\programs\python\python39\lib\site-packages
 
 explorer .
 ```
@@ -81,7 +83,7 @@ Mi recomendación es añadir esta ruta al path del usuario para poder acceder c�
 4. Pegamos la carpeta de PySide6:
 
 ```
-C:\Users\hcost\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\PySide6
+c:\users\hcost\appdata\local\programs\python\python39\lib\site-packages\pyside6
 ```
 
 Guardamos y reiniciamos las terminales y los editores.
@@ -105,13 +107,13 @@ python
 Copiamos la ruta a los `site-packages`, seleccionamos y clic derecho en la selección para copiar la ruta:
 
 ```
-C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.496.0_x64__qbz5n2kfra8p0\\lib\\site-packages
+c:\users\hcost\appdata\local\programs\python\python39\lib\site-packages
 ```
 
 Accedemos a ella (clic derecho en la línea de comandos para pegar), siendo administradores, y abrimos el explorador en ese directorio:
 
 ```bash
-cd C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.496.0_x64__qbz5n2kfra8p0\\lib\\site-packages
+cd c:\users\hcost\appdata\local\programs\python\python39\lib\site-packages
 
 cd ../..
 

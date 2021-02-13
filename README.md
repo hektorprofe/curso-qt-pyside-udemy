@@ -77,29 +77,26 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.8.4 Qt Style Sheets
 - 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Diseño de interfaces en Qt Designer](1-9/)
+### 1.9: [Interfaces clásicas con QtDesigner](1-9/)
 
-- 1.9.1 Conceptos básicos de Qt Designer
-- 1.9.2 Compilación y uso de interfaces con UIC
-- 1.9.3 Compilación y uso de recursos con RCC
+- 1.9.1 Nuestro primer diseño
+- 1.9.2 Compilación y carga de interfaces
+- 1.9.3 Compilación y carga de recursos
 - 1.9.4 Manejo de subventanas compiladas
-- 1.9.5 Carga de interfaces sin compilar con QUiLoader
+- 1.9.5 Carga de interfaces sin compilar
 
-### 1.10: [Distribución](1-10/)
-
-A fecha de la realización del curso PySide6 es relativamente nuevo y aún no hay muchas opciones para generar ejecutables. Utilizaremos la forma más simple con `auto-py-to-exe` añadiendo las dependencias manualmente.
-
-- 1.10.1 Generando un ejecutable
-- 1.10.2 Recursos compilados
-
-### 1.11: Interfaces modernas con Qt Quick y QML
+### 1.10 [Interfaces modernas con QtCreator y QtQuick](1-10/)
 
 Esto es interesante, copiar un poco el tutorial. que es QML y que es Qtick
 
-- Que son QML y QT Quick
-- Primeros pasos https://www.youtube.com/watch?v=Jn0PpzB14Y8
+- Que es QT Quick y QML
 - tutorial completo con Qt Creator
   https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
+
+### 1.11 Creación de ejecutables en Windows](1-11/)
+
+- 1.11.1 Ejecutables con auto-py-to-exe (dependencias manuales)
+- 1.11.2 Comprensión del distribuible con 7-Zip
 
 ## 2: Desarrollo de programas
 
