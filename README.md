@@ -80,10 +80,9 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 ### 1.9: [Interfaces clásicas con QtDesigner](1-9/)
 
 - 1.9.1 Nuestro primer diseño
-- 1.9.2 Compilación y carga de interfaces
-- 1.9.3 Compilación y carga de recursos
+- 1.9.2 Compilación y uso de diseños con recursos
+- 1.9.3 Añadiendo la programación al diseño
 - 1.9.4 Manejo de subventanas compiladas
-- 1.9.5 Carga de interfaces sin compilar
 
 ### 1.10 [Interfaces modernas con QtCreator y QtQuick](1-10/)
 
