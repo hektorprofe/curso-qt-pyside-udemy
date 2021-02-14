@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main.ui'
+## Form generated from reading UI file 'principal.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.0.1
 ##
@@ -18,11 +18,14 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(303, 241)
+        MainWindow.setEnabled(True)
+        MainWindow.resize(151, 135)
         icon = QIcon()
-        icon.addFile(u":/data/recursos/info.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/iconos/recursos/qt.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet(u"QWidget\n"
+        MainWindow.setStyleSheet(u"/* ChatBee */\n"
+"\n"
+"QWidget\n"
 "{\n"
 "	background-color: #282936;\n"
 "	color: #ffffff;\n"
@@ -90,9 +93,9 @@ class Ui_MainWindow(object):
 "{\n"
 "	background-color: #ffc80b;\n"
 "	color: #000000;\n"
-"	font-weight: bold;\n"
-"	border:"
-                        " 0px solid;\n"
+"	font-wei"
+                        "ght: bold;\n"
+"	border: 0px solid;\n"
 "	border-radius: 2px;\n"
 "\n"
 "}\n"
@@ -159,9 +162,9 @@ class Ui_MainWindow(object):
 "	background-color: #3a3a4e;\n"
 "	color: #fff;\n"
 "	border: 0px solid;\n"
-"	border-radius: 2px;\n"
-"	font-weight: bo"
-                        "ld;\n"
+"	border-radius: 2p"
+                        "x;\n"
+"	font-weight: bold;\n"
 "\n"
 "}\n"
 "\n"
@@ -230,9 +233,9 @@ class Ui_MainWindow(object):
 "   border: none;\n"
 "   border-radius : 0px;\n"
 "   background-color: #ffc80b;\n"
-"   min-height: 80px;\n"
-" "
-                        "  width : 12px;\n"
+"   "
+                        "min-height: 80px;\n"
+"   width : 12px;\n"
 "\n"
 "}\n"
 "\n"
@@ -286,11 +289,11 @@ class Ui_MainWindow(object):
 "QScrollBar::sub-line:vertical:hover,\n"
 "QScrollBar::sub-line:horizontal:hover\n"
 "{\n"
-"   background-color: transparent;\n"
+"   background-color: t"
+                        "ransparent;\n"
 "\n"
 "}\n"
-""
-                        "\n"
+"\n"
 "\n"
 "QScrollBar::sub-line:vertical:pressed,\n"
 "QScrollBar::sub-line:horizontal:pressed\n"
@@ -327,48 +330,46 @@ class Ui_MainWindow(object):
 "	\n"
 "}\n"
 "")
-        MainWindow.setIconSize(QSize(24, 22))
-        MainWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
+        self.actionCtrl_Q = QAction(MainWindow)
+        self.actionCtrl_Q.setObjectName(u"actionCtrl_Q")
+        self.action_Salir = QAction(MainWindow)
+        self.action_Salir.setObjectName(u"action_Salir")
+        icon1 = QIcon()
+        icon1.addFile(u":/iconos/recursos/exit.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.action_Salir.setIcon(icon1)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
-        self.centralwidget.setSizePolicy(sizePolicy)
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.radioButton = QRadioButton(self.centralwidget)
-        self.radioButton.setObjectName(u"radioButton")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.verticalLayout_2.addWidget(self.radioButton)
+        self.verticalLayout.addWidget(self.label)
+
+        self.lineEdit = QLineEdit(self.centralwidget)
+        self.lineEdit.setObjectName(u"lineEdit")
+
+        self.verticalLayout.addWidget(self.lineEdit)
 
         self.pushButton = QPushButton(self.centralwidget)
         self.pushButton.setObjectName(u"pushButton")
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        icon1 = QIcon()
-        icon1.addFile(u":/data/recursos/fichero.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon1)
 
-        self.verticalLayout_2.addWidget(self.pushButton)
-
-        self.checkBox = QCheckBox(self.centralwidget)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setMaximumSize(QSize(85, 16))
-
-        self.verticalLayout_2.addWidget(self.checkBox)
+        self.verticalLayout.addWidget(self.pushButton)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 303, 22))
+        self.menubar.setGeometry(QRect(0, 0, 151, 22))
+        self.menuArchivo = QMenu(self.menubar)
+        self.menuArchivo.setObjectName(u"menuArchivo")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
-        self.statusbar.setAutoFillBackground(False)
-        self.statusbar.setInputMethodHints(Qt.ImhHiddenText)
         MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuArchivo.menuAction())
+        self.menuArchivo.addAction(self.action_Salir)
 
         self.retranslateUi(MainWindow)
 
@@ -376,21 +377,17 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Super Programa", None))
-        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
-#if QT_CONFIG(tooltip)
-        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"prueba de tooltip", None))
-#endif // QT_CONFIG(tooltip)
-#if QT_CONFIG(whatsthis)
-        self.pushButton.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>prueba</p></body></html>", None))
-#endif // QT_CONFIG(whatsthis)
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"CheckBox", None))
-#if QT_CONFIG(whatsthis)
-        self.statusbar.setWhatsThis(QCoreApplication.translate("MainWindow", u"lol", None))
-#endif // QT_CONFIG(whatsthis)
-#if QT_CONFIG(accessibility)
-        self.statusbar.setAccessibleName(QCoreApplication.translate("MainWindow", u"lol", None))
-#endif // QT_CONFIG(accessibility)
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Primer dise\u00f1o", None))
+        self.actionCtrl_Q.setText(QCoreApplication.translate("MainWindow", u"Ctrl+Q", None))
+        self.action_Salir.setText(QCoreApplication.translate("MainWindow", u"&Salir", None))
+#if QT_CONFIG(shortcut)
+        self.action_Salir.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+Q", None))
+#endif // QT_CONFIG(shortcut)
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Introduce un texto", None))
+#if QT_CONFIG(statustip)
+        self.pushButton.setStatusTip(QCoreApplication.translate("MainWindow", u"Soy un bot\u00f3n", None))
+#endif // QT_CONFIG(statustip)
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Enviar", None))
+        self.menuArchivo.setTitle(QCoreApplication.translate("MainWindow", u"&Archivo", None))
     # retranslateUi
 

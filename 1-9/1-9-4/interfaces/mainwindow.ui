@@ -2,23 +2,28 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>303</width>
-    <height>241</height>
+    <width>151</width>
+    <height>135</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Super Programa</string>
+   <string>Primer diseño</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../recursos.qrc">
-    <normaloff>:/data/recursos/info.png</normaloff>:/data/recursos/info.png</iconset>
+    <normaloff>:/iconos/recursos/qt.png</normaloff>:/iconos/recursos/qt.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget
+   <string notr="true">/* ChatBee */
+
+QWidget
 {
 	background-color: #282936;
 	color: #ffffff;
@@ -320,63 +325,28 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 }
 </string>
   </property>
-  <property name="iconSize">
-   <size>
-    <width>24</width>
-    <height>22</height>
-   </size>
-  </property>
-  <property name="toolButtonStyle">
-   <enum>Qt::ToolButtonIconOnly</enum>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>RadioButton</string>
+       <string>Introduce un texto</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
      </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="toolTip">
-       <string>prueba de tooltip</string>
-      </property>
-      <property name="whatsThis">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;prueba&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <property name="statusTip">
+       <string>Soy un botón</string>
       </property>
       <property name="text">
-       <string>PushButton</string>
-      </property>
-      <property name="icon">
-       <iconset resource="../recursos.qrc">
-        <normaloff>:/data/recursos/fichero.png</normaloff>:/data/recursos/fichero.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="maximumSize">
-       <size>
-        <width>85</width>
-        <height>16</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>CheckBox</string>
+       <string>Enviar</string>
       </property>
      </widget>
     </item>
@@ -387,25 +357,36 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>303</width>
+     <width>151</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="action_Salir"/>
+   </widget>
+   <addaction name="menuArchivo"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar">
-   <property name="whatsThis">
-    <string>lol</string>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCtrl_Q">
+   <property name="text">
+    <string>Ctrl+Q</string>
    </property>
-   <property name="accessibleName">
-    <string>lol</string>
+  </action>
+  <action name="action_Salir">
+   <property name="icon">
+    <iconset resource="../recursos.qrc">
+     <normaloff>:/iconos/recursos/exit.png</normaloff>:/iconos/recursos/exit.png</iconset>
    </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
+   <property name="text">
+    <string>&amp;Salir</string>
    </property>
-   <property name="inputMethodHints">
-    <set>Qt::ImhHiddenText</set>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
-  </widget>
+  </action>
  </widget>
  <resources>
   <include location="../recursos.qrc"/>

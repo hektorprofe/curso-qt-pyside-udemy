@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'widget.ui'
+## Form generated from reading UI file 'subventana.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.0.1
 ##
@@ -12,17 +12,15 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-import recursos_rc
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(215, 100)
-        icon = QIcon()
-        icon.addFile(u":/data/recursos/info.png", QSize(), QIcon.Normal, QIcon.Off)
-        Form.setWindowIcon(icon)
-        Form.setStyleSheet(u"QWidget\n"
+        Form.resize(227, 135)
+        Form.setStyleSheet(u"/* ChatBee */\n"
+"\n"
+"QWidget\n"
 "{\n"
 "	background-color: #282936;\n"
 "	color: #ffffff;\n"
@@ -90,9 +88,9 @@ class Ui_Form(object):
 "{\n"
 "	background-color: #ffc80b;\n"
 "	color: #000000;\n"
-"	font-weight: bold;\n"
-"	border:"
-                        " 0px solid;\n"
+"	font-wei"
+                        "ght: bold;\n"
+"	border: 0px solid;\n"
 "	border-radius: 2px;\n"
 "\n"
 "}\n"
@@ -159,9 +157,9 @@ class Ui_Form(object):
 "	background-color: #3a3a4e;\n"
 "	color: #fff;\n"
 "	border: 0px solid;\n"
-"	border-radius: 2px;\n"
-"	font-weight: bo"
-                        "ld;\n"
+"	border-radius: 2p"
+                        "x;\n"
+"	font-weight: bold;\n"
 "\n"
 "}\n"
 "\n"
@@ -230,9 +228,9 @@ class Ui_Form(object):
 "   border: none;\n"
 "   border-radius : 0px;\n"
 "   background-color: #ffc80b;\n"
-"   min-height: 80px;\n"
-" "
-                        "  width : 12px;\n"
+"   "
+                        "min-height: 80px;\n"
+"   width : 12px;\n"
 "\n"
 "}\n"
 "\n"
@@ -286,11 +284,11 @@ class Ui_Form(object):
 "QScrollBar::sub-line:vertical:hover,\n"
 "QScrollBar::sub-line:horizontal:hover\n"
 "{\n"
-"   background-color: transparent;\n"
+"   background-color: t"
+                        "ransparent;\n"
 "\n"
 "}\n"
-""
-                        "\n"
+"\n"
 "\n"
 "QScrollBar::sub-line:vertical:pressed,\n"
 "QScrollBar::sub-line:horizontal:pressed\n"
@@ -329,6 +327,15 @@ class Ui_Form(object):
 "")
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label = QLabel(Form)
+        self.label.setObjectName(u"label")
+        font = QFont()
+        font.setPointSize(14)
+        self.label.setFont(font)
+        self.label.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label)
+
         self.pushButton = QPushButton(Form)
         self.pushButton.setObjectName(u"pushButton")
 
@@ -341,7 +348,8 @@ class Ui_Form(object):
     # setupUi
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"widget", None))
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Subventana", None))
+        self.label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        self.pushButton.setText(QCoreApplication.translate("Form", u"Cerrar", None))
     # retranslateUi
 

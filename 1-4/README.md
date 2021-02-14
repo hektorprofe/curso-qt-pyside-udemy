@@ -458,4 +458,6 @@ O hacer que las pestañas se puedan arrastrar para cambiar el orden:
 tabs.setMovable(True)
 ```
 
-Con esto acabamos este repaso por los layouts más esenciales de Qt.
+Y con esto acabamos el repaso de los layouts esenciales de Qt.
+
+    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

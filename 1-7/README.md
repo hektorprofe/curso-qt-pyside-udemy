@@ -155,4 +155,6 @@ boton_alternador.clicked.connect(
 layout.addWidget(boton_alternador)
 ```
 
-Con esto ya sabéis como trabajar con subventanas y comunicaros con ellas, ahora es cuestión de echarle imaginación.
+Ahora ya sabéis como trabajar con subventanas y comunicaros con ellas, ahora es cuestión de echarle imaginación.
+
+    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

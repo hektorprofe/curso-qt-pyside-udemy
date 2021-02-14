@@ -1,13 +1,13 @@
-# 1.9 Interfaces clásicas con QtDesigner
+# 1.9 Diseño de interfaces con Qt Designer
 
 - 1.9.1 Nuestro primer diseño
 - 1.9.2 Compilación y uso de diseños con recursos
-- 1.9.3 Añadiendo la programación al diseño
-- 1.9.4 Manejo de subventanas compiladas
+- 1.9.3 Añadiendo funcionalidades al diseño
+- 1.9.4 Gestión de múltiples diseños
 
 En esta unidad se da por hecho que se tiene en el path el designer, rcc y uic.
 
-## 1.9.1 Nuestro primer diseño (layout, elementos, tamaños, expandir, recursos, experimentar...)
+## 1.9.1 Nuestro primer diseño
 
 Muy bien, pues vamos a diseñar nuestra primera interfaz. Si tenemos el directorio de PySide6 en el PATH del sistema podemos abrir el programa escribiendo:
 
@@ -101,9 +101,11 @@ Se abrirá un formulario donde podemos pegar todo el contenido de nuestro ficher
 
 <img src="docs/09.png">
 
-Y creo que ya hemos visto todos los conceptos clave. Sí que haremos algunos diseños de proramas en el segundo bloque del curso, pero el mejor maestro es la práctica. Os aconsejo perderos un rato probando layouts, widgets y cambiando sus propiedades para aprender por vuestra cuenta.
+Y creo que ya hemos visto todos los conceptos clave.
 
-En la próxima lección vamos a transformar este diseño en un fichero Python donde podremos programar en él.
+En el segundo bloque del curso diseñaremos algunos programas, pero el mejor maestro es la práctica. Os aconsejo perderos un rato probando layouts, widgets y cambiando sus propiedades para aprender por vuestra cuenta.
+
+En la próxima lección vamos a transformar este diseño en un fichero Python para empezar a trabajar con él.
 
 ## 1.9.2 Compilación y uso de diseños con recursos
 
@@ -120,7 +122,7 @@ uic -h
 El comando para compilar un diseño es:
 
 ```bash
-cd 1-9-1/interfaces
+cd 1-9-2/interfaces
 uic.exe -g python mainwindow.ui -o mainwindow.py
 ```
 
@@ -141,7 +143,7 @@ Compilar los recursos es un proceso calcado a compilar los diseños, pero esta v
 El comando para compilar los recursos es:
 
 ```bash
-cd 1-9-1
+cd 1-9-2
 rcc.exe -g python -o recursos_rc.py recursos.qrc  # mismo directorio
 ```
 
@@ -177,13 +179,143 @@ if __name__ == '__main__':
 
 Vamos a ejecutar el programa a ver si todo funciona bien:
 
-- Widgets -> Ok
-- Estilos -> Ok
-- Recursos -> Ok
-- Tips -> Ok
+- `Widgets` -> Ok
+- `Estilos` -> Ok
+- `Recursos` -> Ok
+- `Tips` -> Ok
 
 Ya lo véis, fácil, rápido y para toda la familia.
 
-En la próxima lección vamos a ver cómo programar este cascarón para que los widgets tengan alguna funcionalidad.
+En la próxima lección vamos a añadir funcionalidades al diseño.
 
-## 1.9.3 Añadiendo la programación al diseño
+## 1.9.3 Añadiendo funcionalidades al diseño
+
+Para interactuar con los componentes de la interfaz debemos acceder a ellos a partir de sus nombres de objeto, que aparecen en el inspector de objetos de Qt Designer. Podemos cambiar los nombres haciendo doble clic en ellos o utilizar los que crean por defecto.
+
+Una vez tenemos los nombres es tan sencillo como manejar nuestras propias instancias:
+
+```python
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox  # edited
+from interfaces.mainwindow import Ui_MainWindow
+import sys
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.setupUi(self)
+
+        # configuramos una señal para el botón
+        self.pushButton.clicked.connect(self.mostrar_mensaje)
+
+    def mostrar_mensaje(self):
+        QMessageBox.information(
+            self, "Diálogo", f"El contenido del campo de de texto es:\n\n{self.lineEdit.text()}")
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+En cuanto a la acción para salir del programa, podemos recuperarla y establecer su señal tal como aprendimos al manejar los menús:
+
+```python
+# configuramos la señal de la acción para salir del programa
+self.action_Salir.triggered.connect(self.close)
+```
+
+Con esto podremos cerrar la aplicación también haciendo servir el acceso directo `Control+Q` que configuramos en el diseñador.
+
+Como véis los diseños compilados se utilizan como un programa normal, solo que la parte de generar la estructura se realiza en el fichero de diseño, un fichero que por cierto, nunca debemos editar, ya que tal como avisa en los comentarios superiores, si recompilamos la interfaz todos los cambios se perderán:
+
+```python
+# WARNING! All changes made in this file will be lost when recompiling UI file!
+```
+
+Además es buena idea tener la lógica del programa separada del diseño, esto se conoce más o menos como patrón Modelo-Vista, teniendo en el modelo la lógica del programa y en la vista el diseño del programa.
+
+Solo me falta mostraros cómo gestionar múltiples diseños, por ejemplo una ventana principal y una subventana ambas creadas con Qt Designer.
+
+Lo vemos en la próxima lección.
+
+## 1.9.4 Gestión de múltiples diseños
+
+Supongamos que en lugar de mostrar un cuadro de diálogo queremos crear una subventana un diseñada con Qt Designer.
+
+Vamos a crear algo sencillo tomando como base la clase `QWidget`:
+
+<img src="docs/10.png">
+
+Compilamos el diseñode la subventana:
+
+```bash
+cd 1-9-4/interfaces
+uic.exe -g python mainwindow.ui -o mainwindow.py
+```
+
+Vamos a partir del programa de antes sin la señal del botón:
+
+```python
+from PySide6.QtWidgets import QApplication, QMainWindow
+from interfaces.mainwindow import Ui_MainWindow
+import sys
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.setupUi(self)
+        self.action_Salir.triggered.connect(self.close)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+Importamos la subventana, creamos un nuevo widget a nuestro gusto heredando de `QWidget` y su diseño para poder llamar a su método `setupUi`:
+
+```python
+from interfaces.subventana import Ui_Form  # el diseño de un widget es un form
+
+class Subventana(QWidget, Ui_Form):
+    def __init__(self):
+        # llamamos al constructor explícito de QWidget
+        QWidget.__init__(self)
+        # generamos la interfaz de la subventana
+        self.setupUi(self)
+        # señal para cerrar la subventana
+        self.pushButton.clicked.connect(self.close)
+```
+
+Fijaros como la lógica es la misma, pero al heredar de `Qwidget` debemos llamar a su constructor explícitamente. Recordad que la diferencia entre una ventana principal y un widget es que los segundos no contienen componentes como los las barras de menus o de herramientas.
+
+Ahora, para manejar esta subventana lo haremos exactamente igual que aprendimos en las unidades anteriores, creando una instancia de la misma y mostrándola al presionar el botón de la ventana principal:
+
+```python
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.setupUi(self)
+        self.action_Salir.triggered.connect(self.close)
+
+        # creamos la subventana pero no la mostramos
+        self.subventana = Subventana()
+        # señal para abrir la subventana enviándole el texto del campo
+        self.pushButton.clicked.connect(self.mostrar_subventana)
+
+    def mostrar_subventana(self):
+        # establecemos el texto de la ventana principal en la subventana
+        self.subventana.label.setText(self.lineEdit.text())
+        # y mostramos la subventana
+        self.subventana.show()
+```
+
+<img src="docs/11.png">
+
+Y ya lo tenemos.
+
+Solo comentar algo, si hubiéramos creado un diálogo en Qt Designer deberíamos haber heredado de la clase `QDialog` en lugar de `QWidget`, tenedlo presento.
+
+    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

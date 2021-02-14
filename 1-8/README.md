@@ -401,4 +401,6 @@ self.cargarQSS("qss/ChatBee.qss")
 self.cargarQSS("qss/EasyCode.qss")
 ```
 
-Con esto tenéis toneladas de referencias para tematizar vuestros programas y terminamos la unidad.
+Con esto tenéis toneladas de referencias para tematizar vuestros programas.
+
+    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

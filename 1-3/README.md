@@ -404,4 +404,8 @@ numero.setValue(3.14)
 print(numero.value())
 ```
 
-Con esto acaba el repaso de los widgets básicos para formularios. Existen muchos otros para realizar todo tipo de tareas. Descubriremos algunos de ellos a lo largo del curso, pero si queréis una referencia completa lo mejor es buscar en la [documentación de qt](https://doc.qt.io/qt-6/qwidget.html) las clases heredadas de `QWidget` y probar vosotros mismos.
+Con esto acabamos el repaso de los widgets básicos para formularios.
+
+Existen muchos otros widgets para realizar todo tipo de tareas. Descubriremos algunos de ellos más adelante, pero si queréis una referencia completa lo mejor es buscar en la [documentación de qt](https://doc.qt.io/qt-6/qwidget.html) las clases heredadas de `QWidget`.
+
+    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

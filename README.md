@@ -1,8 +1,8 @@
-# Índice del curso
+# Desarrollo de programas gráficos en Python con Qt/PySide6
 
 El curso tiene dos bloques independientes para separar el aprendizaje de Pyside y el desarrollo de diferentes programas. Mi intención es extender el segundo bloque y con el tiempo crear colección de programas de ejemplo.
 
-## 1: Fundamentos de Qt/PySide
+## 1: Introducción a Qt/PySide6 con ejemplos fáciles
 
 ### 1.1: [Preparación prévia](1-1/)
 
@@ -77,27 +77,19 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 - 1.8.4 Qt Style Sheets
 - 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Interfaces clásicas con QtDesigner](1-9/)
+### 1.9: [Diseño de interfaces con Qt Designer](1-9/)
 
 - 1.9.1 Nuestro primer diseño
 - 1.9.2 Compilación y uso de diseños con recursos
-- 1.9.3 Añadiendo la programación al diseño
-- 1.9.4 Manejo de subventanas compiladas
+- 1.9.3 Añadiendo funcionalidades al diseño
+- 1.9.4 Gestión de múltiples diseños
 
-### 1.10 [Interfaces modernas con QtCreator y QtQuick](1-10/)
+### 1.10 [ Creación de ejecutables para Windows](1-10/)
 
-Esto es interesante, copiar un poco el tutorial. que es QML y que es Qtick
+- 1.10.1 Ejecutables con auto-py-to-exe (dependencias manuales)
+- 1.10.2 Comprensión del distribuible con 7-Zip
 
-- Que es QT Quick y QML
-- tutorial completo con Qt Creator
-  https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-
-
-### 1.11 Creación de ejecutables en Windows](1-11/)
-
-- 1.11.1 Ejecutables con auto-py-to-exe (dependencias manuales)
-- 1.11.2 Comprensión del distribuible con 7-Zip
-
-## 2: Desarrollo de programas
+## 2: Desarrollo de programas gráficos con Qt/PySide6
 
 _Primero desarrollar todo el bloque 1 en este primer impulso, luego veremos los programas._
 
@@ -116,3 +108,8 @@ Otro programa intentará explorar el concepto de arquitectura MVC:
 - Arquitectura MVC
 - Modelos y vistas
 - Implementando un programa con crud
+
+### Programa potencial
+
+- Lenguaje QML
+- Ide Qt Creator + Qt Quick: https://www.youtube.com/watch?v=pD0UeD7S27s&list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-

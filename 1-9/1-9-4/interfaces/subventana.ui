@@ -6,19 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>215</width>
-    <height>100</height>
+    <width>227</width>
+    <height>135</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="../recursos.qrc">
-    <normaloff>:/data/recursos/info.png</normaloff>:/data/recursos/info.png</iconset>
+   <string>Subventana</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget
+   <string notr="true">/* ChatBee */
+
+QWidget
 {
 	background-color: #282936;
 	color: #ffffff;
@@ -322,16 +320,29 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>widget</string>
+      <string>Cerrar</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../recursos.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
