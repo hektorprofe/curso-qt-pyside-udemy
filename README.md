@@ -93,7 +93,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
     Un proyecto puede ser diseñar una interfaz moderna con animaciones, sin funcionalidades. La palabra programa implica que código haga algo, proyecto es más global y da más juego, permitiéndonos centrar en logica, diseño, o ambas.
 
-### Programa planeado
+### Proyecto planeado
 
 Uno de los programas debe ser crear un reloj con ejecución concurrente usando threads:
 
@@ -101,13 +101,21 @@ Uno de los programas debe ser crear un reloj con ejecución concurrente usando t
 - Usando un thread pool
 - Implementando un reloj (se puede con hilos)
 
-### Programa planeado
+### Proyecto planeado
 
 Otro programa intentará explorar el concepto de arquitectura MVC:
 
 - Arquitectura MVC
 - Modelos y vistas
 - Implementando un programa con crud
+
+### Proyecto planeado
+
+Interfaz con animaciones
+
+- Solo interfaz, introducir las animaciones
+- Menú chulo y lo que se me ocurra
+- Esconder bordes, etc
 
 ### Programa potencial
 
