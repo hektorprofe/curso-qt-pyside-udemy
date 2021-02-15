@@ -6,11 +6,12 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ### 1.1: [Preparación prévia](1-01/)
 
-- 1.1.1 Requisitos para tomar el curso
+- 1.1.1 Requisitos recomendados
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Extensiones de VSC y demases
 - 1.1.4 Tip: Añadir el software de Qt al Path
-- 1.1.5 Tip: Encontrar el intérprete de Python
+- 1.1.5 Tip: Configurar el compilador uic en Qt Designer
+- 1.1.6 Tip: Encontrar el intérprete de Python
 
 ### 1.2: [Conceptos básicos](1-02/)
 

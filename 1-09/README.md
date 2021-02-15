@@ -126,7 +126,11 @@ cd 1-9-2/interfaces
 uic.exe -g python mainwindow.ui -o mainwindow.py
 ```
 
-Así habremos generado un fichero `python` dentro de la carpeta interfaces. Si lo analizamos encontraremos varias importaciones y todo el código para generar la ventana:
+Así habremos generado un fichero `python` dentro de la carpeta interfaces.
+
+Este proceso se puede realizar directamente desde `Qt Designer` si se tiene configurado `uic.exe` tal como explico al principio del curso.
+
+Sea como sea, si analizamos el fichero generado encontraremos las importaciones y el código para generar la ventana:
 
 ```python
 from PySide6.QtCore import *
@@ -136,7 +140,9 @@ from PySide6.QtWidgets import *
 import recursos_rc
 ```
 
-Quiero que os fijéis en la línea `import recursos_rc`. Esta línea es la que va a cargar los recursos compilados del diseño. Esos recursos deberán estar en el módulo `recursos_rc` de la propia carpeta, así que necesitamos crearlos.
+Quiero que os fijéis en la línea `import recursos_rc`.
+
+Esta importación es la que va a cargar los recursos compilados del diseño, que deberán estar en el módulo `recursos_rc` de la propia carpeta, así que necesitamos crearlos.
 
 Compilar los recursos es un proceso calcado a compilar los diseños, pero esta vez se utiliza otra herramienta de Qt llamada `rcc`: Resource Compiler.
 

@@ -4,7 +4,8 @@
 - 1.1.2 Equipo de pruebas y versiones
 - 1.1.3 Tip: Extensiones de VSC y demases
 - 1.1.4 Tip: Añadir el software de Qt al Path
-- 1.1.5 Tip: Encontrar el intérprete de Python
+- 1.1.5 Tip: Configurar el compilador uic en Qt Designer
+- 1.1.6 Tip: Encontrar el intérprete de Python
 
 ## 1.1.1 Requisitos recomendados
 
@@ -94,7 +95,29 @@ Ahora podemos ejecutar desde cualquier lugar los ejecutables:
 - `uic.exe`: Compilador de interfaces de usuario.
 - `rcc.exe`: Compilador de recursos.
 
-## 1.1.5 Tip: Encontrar el intérprete de Python
+## 1.1.5 Tip: Configurar el compilador uic en Qt Designer
+
+Abrimos el diseñador:
+
+```bash
+designer
+```
+
+- Fomulario > `View Python Code`
+
+Nos indicará que se espera `uic` en el directorio `bin` del paquete `PySide6`:
+
+```bash
+cd c:\users\hcost\appdata\local\programs\python\python39\lib\site-packages\pyside6
+explorer .
+
+```
+
+Creamos una carpeta `bin` y copiamos el fichero `uic.exe` dentro.
+
+Listo, ya podemos previsualizar diseños en código Python y exporarlos en ficheros.
+
+## 1.1.6 Tip: Encontrar el intérprete de Python
 
 Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
 
