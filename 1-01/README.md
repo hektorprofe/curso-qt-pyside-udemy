@@ -2,10 +2,10 @@
 
 - 1.1.1 Requisitos recomendados
 - 1.1.2 Equipo de pruebas y versiones
-- 1.1.3 Tip: Extensiones de VSC y demases
-- 1.1.4 Tip: Añadir el software de Qt al Path
-- 1.1.5 Tip: Configurar el compilador uic en Qt Designer
-- 1.1.6 Tip: Encontrar el intérprete de Python
+- 1.1.3 Tutorial: Extensiones de VSC y demases
+- 1.1.4 Tutorial: Añadir el software de Qt al Path
+- 1.1.5 Tutorial: Configurar el compilador uic en Qt Designer
+- 1.1.6 Tutorial: Encontrar el intérprete de Python
 
 ## 1.1.1 Requisitos recomendados
 
@@ -41,7 +41,7 @@ pip install auto-py-to-exe
 python -m auto_py_to_exe
 ```
 
-## 1.1.3 Tip: Extensiones de VSC y demases
+## 1.1.3 Tutorial: Extensiones de VSC y demases
 
 En caso de que alguien quiera utilizar VSC recomiendo las extensiones:
 
@@ -54,7 +54,7 @@ Otras configuraciones interesantes:
 - Tema `Monokai Pro`
 - Fuente `FiraCode` con ligatures
 
-## 1.1.4 Tip: Añadir el software de Qt al Path
+## 1.1.4 Tutorial: Añadir el software de Qt al Path
 
 Desde la terminal re/instalamos Pyside6:
 
@@ -95,7 +95,7 @@ Ahora podemos ejecutar desde cualquier lugar los ejecutables:
 - `uic.exe`: Compilador de interfaces de usuario.
 - `rcc.exe`: Compilador de recursos.
 
-## 1.1.5 Tip: Configurar el compilador uic en Qt Designer
+## 1.1.5 Tutorial: Configurar el compilador uic en Qt Designer
 
 Abrimos el diseñador:
 
@@ -117,7 +117,7 @@ Creamos una carpeta `bin` y copiamos el fichero `uic.exe` dentro.
 
 Listo, ya podemos previsualizar diseños en código Python y exporarlos en ficheros.
 
-## 1.1.6 Tip: Encontrar el intérprete de Python
+## 1.1.6 Tutorial: Encontrar el intérprete de Python
 
 Si queremos encontrar donde está instalado `python.exe`, abrimos una terminal como administrador, clic derecho **Ejecutar como administrador**:
 
