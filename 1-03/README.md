@@ -4,9 +4,9 @@
 - 1.3.2 Casillas
 - 1.3.3 Botons radiales
 - 1.3.4 Desplegables
-- 1.3.4 Listas
-- 1.3.5 Campos de texto
-- 1.3.6 Campos numéricos
+- 1.3.5 Listas
+- 1.3.6 Campos de texto
+- 1.3.7 Campos numéricos
 
 ## 1.3.1 Etiquetas
 
