@@ -27,11 +27,11 @@ class MainWindow(QMainWindow):
         self.subventana = Subventana()
 
         boton_mostrar = QPushButton("Mostrar subventana")
-        boton_mostrar.clicked.connect(lambda: self.subventana.show())
+        boton_mostrar.clicked.connect(self.subventana.show)
         layout.addWidget(boton_mostrar)
 
         boton_ocultar = QPushButton("Ocultar subventana")
-        boton_ocultar.clicked.connect(lambda: self.subventana.hide())
+        boton_ocultar.clicked.connect(self.subventana.hide)
         layout.addWidget(boton_ocultar)
 
         boton_alternador = QPushButton("Alternar subventana")
