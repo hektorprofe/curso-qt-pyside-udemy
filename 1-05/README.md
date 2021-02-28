@@ -436,5 +436,3 @@ def boton_clicado(self):
 ```
 
 Con esto hemos cubierto casi todo sobre los diálogos, si queréis profundizar os dejo la [documentación](https://doc.qt.io/qt-6/dialogs.html) oficial.
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

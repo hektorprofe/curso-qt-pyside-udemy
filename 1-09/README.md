@@ -323,5 +323,3 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 Y ya lo tenemos.
 
 Solo comentar algo, si hubiéramos creado un diálogo en Qt Designer deberíamos haber heredado de la clase `QDialog` en lugar de `QWidget`, tenedlo presento.
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

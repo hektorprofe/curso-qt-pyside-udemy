@@ -309,5 +309,3 @@ self.addDockWidget(Qt.BottomDockWidgetArea, dock3)
 ```
 
 Fijaros como podemos acoplar widgets unos sobre otrossi hay suficiente espacio o apilarlos usando pestañas, dan muchísimo juego.
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

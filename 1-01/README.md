@@ -144,5 +144,3 @@ explorer .
 ```
 
 Ahí tenemos el ejecutable de Python del sistema.
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

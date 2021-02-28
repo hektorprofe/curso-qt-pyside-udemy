@@ -411,5 +411,3 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 ```
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

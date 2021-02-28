@@ -60,5 +60,3 @@ Este compresor es software libre y por lo tanto gratuito, a diferencia de Winzip
 Otros modos de compresión como el clásico `zip` o `tar.gz` no reducen tanto el tamaño:
 
 <img src="docs/03.png">
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS

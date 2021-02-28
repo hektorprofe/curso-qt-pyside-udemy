@@ -459,5 +459,3 @@ tabs.setMovable(True)
 ```
 
 Y con esto acabamos el repaso de los layouts esenciales de Qt.
-
-    NOTA: NO DECIR QUE SE ACABA LA UNIDAD NI NADA, DEJAR SIEMPRE LAS UNIDADES ABIERTAS
