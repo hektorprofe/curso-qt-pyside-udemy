@@ -9,8 +9,10 @@ class Subventana(QWidget):
         super().__init__()
         self.resize(240, 120)
         self.setWindowTitle("Subventana")
+
         # creamos una etiqueta con texto aleatorio
         etiqueta = QLabel(f"Soy una subventana... {random.randint(0, 100)}")
+
         layout = QVBoxLayout()
         layout.addWidget(etiqueta)
         self.setLayout(layout)
@@ -25,26 +27,18 @@ class MainWindow(QMainWindow):
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
-        # botón para mostrar la subventana
-        boton_abrir = QPushButton("Mostrar subventana")
-        boton_abrir.clicked.connect(lambda: self.subventana.show())
-        layout.addWidget(boton_abrir)
-
-        # botón para ocultar la subventana
-        boton_cerrar = QPushButton("Ocultar subventana")
-        boton_cerrar.clicked.connect(lambda: self.subventana.hide())
-        layout.addWidget(boton_cerrar)
-
-        # botón para alternar la subventana
-        boton_alternador = QPushButton("Alternar subventana")
-        boton_alternador.clicked.connect(
-            lambda: self.subventana.hide()
-            if self.subventana.isVisible()
-            else self.subventana.show())
-        layout.addWidget(boton_alternador)
-
         # creamos una instancia de la subventana al principio
         self.subventana = Subventana()
+
+        # botón para mostrar la subventana
+        boton_mostrar = QPushButton("Mostrar subventana")
+        boton_mostrar.clicked.connect(self.subventana.show)
+        layout.addWidget(boton_mostrar)
+
+        # botón para ocultar la subventana
+        boton_ocultar = QPushButton("Ocultar subventana")
+        boton_ocultar.clicked.connect(self.subventana.hide)
+        layout.addWidget(boton_ocultar)
 
 
 if __name__ == "__main__":
