@@ -4,7 +4,7 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ## 1: Introducción a Qt/PySide6 con ejemplos fáciles
 
-### 1.1: [Preparación prévia](1-01 Preparación prévia/)
+### 1.1: [Preparación prévia]("1-01 Preparación prévia/")
 
 - 1.1.1 Requisitos recomendados
 - 1.1.2 Equipo de pruebas y versiones
