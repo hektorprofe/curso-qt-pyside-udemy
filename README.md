@@ -92,25 +92,19 @@ El curso tiene dos bloques independientes para separar el aprendizaje de Pyside 
 
 ## 2: Desarrollo de proyectos gráficos con Qt/PySide6
 
-La palabra "proyecto" indica flexibilidad a la hora de realiar los experimentos, centrándose algunos en la logica, otros en el diseño y otros en ambas.
+Nota: La palabra "proyecto" indica flexibilidad a la hora de realizar los experimentos, pudiendo centrarse algunos en la programación y otros en el diseño.
 
-### Proyecto planeado (básico)
-
-Ejemplo de CRUD:
+### Proyecto planeado (básico): Ejemplo de CRUD
 
 - Arquitectura Modelo Vista Controlador
 - Usar ORM Peewee
 
-### Proyecto planeado (avanzado)
-
-Reloj concurrente:
+### Proyecto planeado (avanzado): Reloj concurrente
 
 - Hilos y procesos
 - Usando un thread pool
 
-### Proyecto planeado (diseño)
+### Proyecto planeado (diseño): Interfaz animada
 
-Interfaz con animaciones
-
-- Menú animado desplegable
+- Menú desplegable con animaciones
 - Esconder bordes, etc
