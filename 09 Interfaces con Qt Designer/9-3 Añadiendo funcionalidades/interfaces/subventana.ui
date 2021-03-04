@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>270</width>
+    <height>81</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Subventana</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/iconos/recursos/qt.png</normaloff>:/iconos/recursos/qt.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*-----QWidget-----*/
+QWidget
+{
+	background-color: #282936;
+	color: #ffffff;
+	border-color: #000000;
+
+}
+
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: #282936;
+	color: #ffffff;
+	border-color: #000000;
+
+}
+
+
+/*-----QToolTip-----*/
+QToolTip
+{
+	background-color: #282936;
+	color: #fff;
+	border: 1px solid #282936;
+	font-weight: bold;
+
+}
+
+
+/*-----QToolButton-----*/
+QPushButton
+{
+	background-color: #ffc80b;
+	color: #000000;
+	font-weight: bold;
+	border: 0px solid;
+	border-radius: 2px;
+
+}
+
+
+QPushButton::hover
+{
+	background-color: #ffe152;  
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: #e5c010;
+
+}
+
+
+QPushButton::checked
+{
+	background-color: #e5c010;
+
+}
+
+
+/*-----QToolButton-----*/
+QToolButton
+{
+	background-color: #ffc80b;
+	color: #000000;
+	font-weight: bold;
+	border: 0px solid;
+	border-radius: 2px;
+
+}
+
+
+QToolButton::hover
+{
+	background-color: #ffe152;  
+
+}
+
+
+QToolButton::pressed
+{
+	background-color: #e5c010;
+
+}
+
+
+QToolButton::checked
+{
+	background-color: #e5c010;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit
+{
+	background-color: white;
+	color: #000000;
+	padding: 3px;
+	border: 0px solid;
+	border-radius: 2px;
+	selection-background-color: #0949ff;
+
+}
+
+
+QLineEdit::focus
+{
+	padding: 3px;
+	border: 1px solid #0949ff;
+	border-radius: 2px;
+
+}
+
+
+/*-----QTextEdit-----*/
+QTextEdit
+{
+	background-color: white;
+	color: #000;
+	border-color: #000000;
+	border: 0px solid;
+	border-radius: 2px;
+
+}
+
+
+/*-----QListView-----*/
+QListView
+{
+	background-color: #3a3a4e;
+	color: #fff;
+	border: 0px solid;
+	border-radius: 2px;
+	font-weight: bold;
+
+}
+
+
+QListView::item 
+{
+    padding: 5px;
+
+}
+
+
+QListView::item:selected 
+{
+    border: 1px solid #ffc80b;
+    border: none;
+    color: #000;
+}
+
+
+QListView::item:selected:!active 
+{
+    background-color: #ffc80b;
+    border: none;
+    color: #000;
+
+}
+
+
+QListView::item:selected:active 
+{
+    background-color: #ffc80b;
+    border: none;
+    color: #000;
+
+}
+
+
+QListView::item:hover 
+{
+    background-color: #282936;
+    border: none;
+
+}
+
+
+/*-----QScrollBar-----*/
+QScrollBar:vertical 
+{
+   border: none;
+   width: 10px;
+
+}
+
+
+QScrollBar:horizontal 
+{
+   border: none;
+   height: 10px;
+
+}
+
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal
+{
+   border: none;
+   border-radius : 0px;
+   background-color: #ffc80b;
+   min-height: 80px;
+   width : 12px;
+
+}
+
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover
+{
+   background-color: #e5c010; 
+
+}
+
+
+QScrollBar::add-line:vertical,
+QScrollBar::add-line:horizontal
+{
+   border: none;
+   background: transparent;
+   height: 0px;
+   subcontrol-position: bottom;
+   subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::add-line:vertical:hover,
+QScrollBar::add-line:horizontal:hover
+{
+   background-color: transparent;
+
+}
+
+
+QScrollBar::add-line:vertical:pressed, 
+QScrollBar::add-line:horizontal:pressed
+{
+   background-color: #3f3f3f;
+
+}
+
+
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-line:horizontal
+{
+   border: none;
+   background: transparent;
+   height: 0px;
+
+}
+
+
+QScrollBar::sub-line:vertical:hover,
+QScrollBar::sub-line:horizontal:hover
+{
+   background-color: transparent;
+
+}
+
+
+QScrollBar::sub-line:vertical:pressed,
+QScrollBar::sub-line:horizontal:pressed
+{
+   background-color: #3f3f3f;
+
+}
+
+
+QScrollBar::up-arrow:vertical,
+QScrollBar::up-arrow:horizontal
+{
+   width: 0px;
+   height: 0px;
+   background: transparent;
+
+}
+
+
+QScrollBar::down-arrow:vertical, 
+QScrollBar::down-arrow:horizontal
+{
+   width: 0px;
+   height: 0px;
+   background: transparent;
+
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+   background-color: white;
+	
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Cerrar</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resources.qrc">
+       <normaloff>:/iconos/recursos/exit.png</normaloff>:/iconos/recursos/exit.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
