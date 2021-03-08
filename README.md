@@ -17,7 +17,7 @@ Sin más, nos vemos en el curso.
 
 ## 1: Introducción a Qt/PySide6 con ejemplos sencillos
 
-### 1.1: [Preparación prévia](1-01%20Preparación%20prévia/)
+### 1.1: [Preparación prévia](Teoría/1-01%20Preparación%20prévia/)
 
 Para tomar este curso es indispensable contar con conocimientos prévios de Python hasta las clases y objetos, así como tener preparado un sistema con Python 3.8 o superior accesible desde la terminal. He grabado un par de tutoriales configurando mi máquina con Windows 10, si tenéis la vuestra lista saltad a la lección de instalación de PySide.
 
@@ -26,7 +26,7 @@ Para tomar este curso es indispensable contar con conocimientos prévios de Pyth
 - 1.1.2 Instalación de VSC y extensiones
 - 1.1.3 Instalación y configuración de PySide
 
-### 1.2: [Conceptos básicos](1-02%20Conceptos%20básicos/)
+### 1.2: [Conceptos básicos](Teoría/1-02%20Conceptos%20básicos/)
 
 En esta unidad aprenderemos sobre "cute " (en español Qt), PySide y PyQt. Desarrollaremos la estructura básica de un programa en PySide extendiendo sus componentes básicos mediante la herencia de clases. Finalmente realizaremos algunos ejemplos para aprender cómo interactuar con los widgets utilizando sus señales y a manipularlos a través de sus métodos.
 
@@ -38,7 +38,7 @@ En esta unidad aprenderemos sobre "cute " (en español Qt), PySide y PyQt. Desar
 - 1.2.6 Señales y receptores
 - 1.2.7 Componentes manipulables
 
-### 1.3: [Widgets para formularios](1-03%20Widgets%20para%20formularios/)
+### 1.3: [Widgets para formularios](Teoría/1-03%20Widgets%20para%20formularios/)
 
 Ahora que tenemos sabemos manejar la estructura básica de un programa, el siguiente paso es aprender a utilizar los widgets más comunes en los formularios. Aprenderemos sobre las etiquetas, las casillas, los botones radiales, los desplegables, las listas y los campos para introducir textos y números desde el teclado.
 
@@ -50,7 +50,7 @@ Ahora que tenemos sabemos manejar la estructura básica de un programa, el sigui
 - 1.3.6 Campos de texto
 - 1.3.7 Campos numéricos
 
-### 1.4: [Formas de organización](1-04%20Formas%20de%20organización/)
+### 1.4: [Formas de organización](Teoría/1-04%20Formas%20de%20organización/)
 
 En esta unidad aprenderemos a organizar el espacio de las ventanas mediante layouts. Para ayudarnos a visualizar el espacio desarrollaremos nuestro propio widget personalizado que utilizaremos en los diferentes layouts. Empezaremos con los más básicos y luego daremos paso a otros más sofisticados, como las cuadrículas y las pestañas.
 
@@ -62,7 +62,7 @@ En esta unidad aprenderemos a organizar el espacio de las ventanas mediante layo
 - 1.4.6 Layout apilado
 - 1.4.7 Layout con pestañas
 
-### 1.5: [Cuadros de diálogo](1-05%20Cuadros%20de%20diálogo/)
+### 1.5: [Cuadros de diálogo](Teoría/1-05%20Cuadros%20de%20diálogo/)
 
 Las ventanas emergentes, cuadros de diálogo o simplemente popups son unos de los elementos más importantes de las interfaces gráficas porque permiten comunicarnos con el usuario de forma explícita. En esta unidad empezaremos desarrollando nuestro propio cuadro de diálogo y luego exploraremos algunas opciones predefinidas que nos facilita Qt.
 
@@ -80,7 +80,7 @@ Las ventanas emergentes, cuadros de diálogo o simplemente popups son unos de lo
   - 1.5.5.2 Diálogos de entrada de datos
   - 1.5.5.3 Diálogos de fuente y color
 
-### 1.6: [Ventana principal](1-06%20Ventana%20principal/)
+### 1.6: [Ventana principal](Teoría/1-06%20Ventana%20principal/)
 
 En esta unidad nos vamos a centrar en la ventana principal y su personalización. Aprenderemos a crear las barras de menú y de herramientas, añadiendo en ellas diferentes acciones con iconos y atajos de teclado. Por el camino activaremos la barra de estado para mostrar mensajes de ayuda y exploraremos una de sus funcionalidades más flexibles, los docks flotantes.
 
@@ -88,14 +88,14 @@ En esta unidad nos vamos a centrar en la ventana principal y su personalización
 - 1.6.2 Barra de herramientas
 - 1.6.3 Docks flotantes
 
-### 1.7: [Control de subventanas](1-07%20Control%20de%20subventanas/)
+### 1.7: [Control de subventanas](Teoría/1-07%20Control%20de%20subventanas/)
 
 A veces un programa con una única ventana no es suficiente, por eso esta unidad está dedicado al control de subventanas. En ella aprenderemos a crear nuestras propias subventanas utilizando como base la clase QWidget. Veremos cómo almacenarlas en la memoria de forma persistente y cómo acceder a sus métodos e información desde la ventana principal.
 
 - 1.7.1 Creación de subventanas
 - 1.7.2 Subventanas persistentes
 
-### 1.8: [Tematización](1-08%20Tematización/)
+### 1.8: [Tematización](Teoría/1-08%20Tematización/)
 
 Esta unidad está dedicada a estudiar las diferentes formas de tematizar las aplicaciones. Aprenderemos a utilizar el tema fusión, a configurar las paletas de colores y a utilizar los iconos predeterminados. También veremos instalaremos algunos paquetes de terceros con temas e iconos alternativos e introduciremos las hojas de estilo de Qt, parecidas a las CSS de la programación web.
 
@@ -105,7 +105,7 @@ Esta unidad está dedicada a estudiar las diferentes formas de tematizar las apl
 - 1.8.4 Qt Style Sheets
 - 1.8.5 Cargando ficheros QSS
 
-### 1.9: [Diseño de interfaces con Qt Designer](1-09%20Interfaces%20con%20Qt%20Designer/)
+### 1.9: [Diseño de interfaces con Qt Designer](Teoría/1-09%20Interfaces%20con%20Qt%20Designer/)
 
 Ahora que ya sabemos un montón sobre PySide y sus componentes es el momento ideal para empezar a utilizar el diseñador de interfaces de Qt. En esta unidad os daré cuatro nociones básicas sobre el programa, aprenderemos a compilar los diseños y los recursos y os enseñaré a utilizarlos en vuestros programas creados con Python de la forma más sencilla posible.
 
@@ -114,16 +114,14 @@ Ahora que ya sabemos un montón sobre PySide y sus componentes es el momento ide
 - 1.9.3 Añadiendo funcionalidades al diseño
 - 1.9.4 Gestión de múltiples diseños
 
-### 1.10 [Creación de ejecutables para Windows](1-10%20Ejecutables%20para%20Windows/)
+### 1.10 [Creación de ejecutables para Windows](Teoría/1-10%20Ejecutables%20para%20Windows/)
 
 Los sistemas operativos Linux y MAC suelen tener Python instalado y ejecutar un programa con PySide es tan sencillo como instalar sus dependencias desde la terminal y ejecutar el script. Pero ese no es el caso de Windows y por eso en esta unidad prenderemos a generar distribuibles con Python integrado utilizando `auto-py-to-exe` y veremos cómo reducir su tamaño con `7-Zip`.
 
 - 1.10.1 Ejecutables con auto-py-to-exe (dependencias manuales)
 - 1.10.2 Comprensión del distribuible con 7-Zip
 
-## 2: Desarrollo de proyectos gráficos con Qt/PySide6
-
-Nota: La palabra "proyecto" no implica una funcionalidad a la hora de realizar los experimentos, pudiendo centrarse algunos en la programación y otros en el diseño.
+## 2: Desarrollo de programas gráficos con Qt/PySide6
 
 ### Proyecto planeado (básico): Ejemplo de CRUD
 
