@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestor de tareas Kanban</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-color: white;
+}
+
+QListWidget{
+border: 0;
+outline: 0;  /* Desactiva un outline dotted que hay por defecto*/
+color: #090909;
+font-size: 18px;
+font-weight: 300;
+background-color: white;
+padding: 0px;
+}
+
+QLabel {
+padding: 10px;
+font-size: 22px;
+font-weight: 300;
+}
+
+QListWidget::item { 
+padding: 0px;
+padding-top: 8px;
+padding-bottom: 8px;
+background-color: white;
+}
+
+QListWidget::item:hover {
+padding: 0px;
+background-color: rgb(255, 235, 12);
+padding-top: 8px;
+padding-bottom: 8px;
+color: black;
+}
+
+QListWidget::item:selected {
+padding: 0px;
+padding-top: 8px;
+padding-bottom: 8px;
+color: black;
+}
+
+/* Items impares con fondo gris
+QListWidget {
+padding: 0px;
+background-color: #DDDDDD;
+padding-top: 8px;
+padding-bottom: 8px;
+color: black;
+}*/</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>12</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_Completadas">
+      <property name="font">
+       <font>
+        <family>Roboto Light</family>
+        <pointsize>-1</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(132, 255, 94);</string>
+      </property>
+      <property name="text">
+       <string>Completadas</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_EnProgreso">
+      <property name="font">
+       <font>
+        <family>Roboto Light</family>
+        <pointsize>-1</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFAF3F;</string>
+      </property>
+      <property name="text">
+       <string>En progreso</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_Pendientes">
+      <property name="font">
+       <font>
+        <family>Roboto Light</family>
+        <pointsize>-1</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 255)</string>
+      </property>
+      <property name="text">
+       <string>Pendientes</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QListWidget" name="list_EnProgreso">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>Tarea en progreso 1</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tarea en progreso 2</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QListWidget" name="list_Pendientes">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>Tarea pendiente 1</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tarea pendiente 2</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tarea pendiente 3</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QListWidget" name="list_Completadas">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>Tarea completada 1</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="label_Titulo">
+      <property name="styleSheet">
+       <string notr="true">font-size: 28px;
+background-color: rgb(69, 69, 69);
+color: #e9e9e9;</string>
+      </property>
+      <property name="text">
+       <string>Tablero Kanban</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
