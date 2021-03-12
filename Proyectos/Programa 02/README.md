@@ -1,6 +1,8 @@
-# Proyecto: Editor de registros en ficheros JSON con Pandas y QTableWidget
+# Editor de registros JSON usando Pandas y TableWidget
 
-La meta de este proyecto es cargar los datos de un fichero en una tabla, poder modificarlos, añadir de nuevos o borrarlos y guardarlos de nuevo en el fichero. Para conseguirlo vamos a trabajar con los `DataFrames` del módulo Pandas y el componente `QTableWidget`.
+https://doc.qt.io/qtforpython/PySide6/QtWidgets/QTableWidget.html
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
+https://doc.qt.io/qtforpython/PySide6/QtWidgets/QAbstractItemView.html
 
 ## Estructura base
 
