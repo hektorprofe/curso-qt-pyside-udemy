@@ -1,1 +1,0 @@
-{"schema":{"fields":[{"name":"Nombre","type":"string"},{"name":"Edad","type":"string"},{"name":"Nota","type":"string"}],"pandas_version":"0.20.0"},"data":[{"Nombre":"Juan","Edad":17,"Nota":6.3},{"Nombre":"Mar\u00eda","Edad":45,"Nota":8.2},{"Nombre":"Ana","Edad":36,"Nota":9.6}]}

@@ -1,8 +1,6 @@
-# Editor de registros JSON usando Pandas y TableWidget
+# Editor de registros JSON usando TableWidget
 
 https://doc.qt.io/qtforpython/PySide6/QtWidgets/QTableWidget.html
-https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
-https://doc.qt.io/qtforpython/PySide6/QtWidgets/QAbstractItemView.html
 
 ## Estructura base
 

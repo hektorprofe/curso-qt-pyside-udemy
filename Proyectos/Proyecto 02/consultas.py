@@ -1,10 +1,6 @@
 import sys
-from pathlib import Path
+from helpers import absPath
 from PySide6.QtSql import QSqlDatabase, QSqlQuery
-
-
-def absPath(file):
-    return str(Path(__file__).parent.absolute() / file)
 
 
 # Crea la conexión
@@ -15,6 +11,8 @@ conexion.setDatabaseName(absPath("Contactos.db"))
 if not conexion.open():
     print("No se puede conectar a la base de datos")
     sys.exit(True)
+else:
+    print("¿Conexión establecida?", conexion.isOpen())
 
 # Cree una consulta y ejecútela de inmediato usando .exec ()
 consulta = QSqlQuery()
@@ -35,11 +33,11 @@ consulta.exec_(f"""
     VALUES ('{nombre}', '{empleo}', '{email}')""")
 
 # Ejecución de consultas dinámicas: parámetros de marcador de posición
-datos = [
-    ("Manuel", "Desarrollador Web", "manuel@example.com"),
-    ("Lorena", "Gestora de proyectos", "lorena@example.com"),
-    ("Javier", "Analista de datos", "javier@example.com"),
-    ("Marta", "Experta en Python", "marta@example.com")
+contactos = [
+    ("Manuel", "Desarrollador Web", "manuel@ejemplo.com"),
+    ("Lorena", "Gestora de proyectos", "lorena@ejemplo.com"),
+    ("Javier", "Analista de datos", "javier@ejemplo.com"),
+    ("Marta", "Experta en Python", "marta@ejemplo.com")
 ]
 
 consulta = QSqlQuery()
@@ -47,7 +45,7 @@ consulta.prepare("""
     INSERT INTO contactos (nombre, empleo, email) VALUES (?, ?, ?)""")
 
 # usamos .addBindValue () para insertar datos
-for nombre, empleo, email in datos:
+for nombre, empleo, email in contactos:
     consulta.addBindValue(nombre)
     consulta.addBindValue(empleo)
     consulta.addBindValue(email)
@@ -67,6 +65,6 @@ while consulta.next():
           consulta.value("email"))
 
 
-# Cerrar y eliminar conexiones de bases de datos
+# Cerrar conexión a la base de datos
 conexion.close()
-print("Conexión abierta?", conexion.isOpen())
+print("¿Conexión cerrada?", not conexion.isOpen())
