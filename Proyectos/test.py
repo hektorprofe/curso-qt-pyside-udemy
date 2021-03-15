@@ -1,5 +1,5 @@
 class Catalogo:
-    peliculas = []  # Esta lista contendrá objetos de la clase Pelicula
+    peliculas = []
 
     def __init__(self, peliculas=[]):
         self.peliculas = peliculas
