@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "C:\\Users\\hcost\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.linting.enabled": true,  
+    "python.linting.pylintPath": "pylint",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": true, 
+    "python.languageServer": "Pylance",
+    //"python.analysis.extraPaths": ["./Proyecto 07", "./Proyecto 08"],
+    "python.linting.pycodestyleArgs": ["--ignore=E501,E226"],
+    "python.formatting.autopep8Args": ["--max-line-length=200"],
+    "python.analysis.useImportHeuristic": true
+}

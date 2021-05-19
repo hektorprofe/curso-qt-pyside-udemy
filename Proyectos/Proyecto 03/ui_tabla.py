@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tablaaMKeay.ui'
+## Form generated from reading UI file 'tablaDBjkBE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.0.1
 ##
@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
 
         self.tabla = QTableView(self.centralwidget)
         self.tabla.setObjectName(u"tabla")
-        self.tabla.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.tabla.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.tabla.horizontalHeader().setStretchLastSection(True)
         self.tabla.verticalHeader().setStretchLastSection(False)
 

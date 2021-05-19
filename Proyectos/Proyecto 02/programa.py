@@ -11,27 +11,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
-        # nos conectamos a la base de datos
-        conexion = QSqlDatabase.addDatabase("QSQLITE")
-        conexion.setDatabaseName(absPath("contactos.db"))
-        if not conexion.open():
-            print("No se puede conectar a la base de datos")
-            sys.exit(True)
+        # conexion = QSqlDatabase.addDatabase("QSQLITE")
+        # conexion.setDatabaseName(absPath("Contactos.db"))
+        # if not conexion.open():
+        #     print("No se puede conectar a la base de datos")
+        #     sys.exit(True)
 
-        # creamos el modelo
-        modelo = QSqlTableModel()
-        modelo.setTable("contactos")
-        modelo.select()
-        modelo.setHeaderData(0, Qt.Horizontal, "Id")
-        modelo.setHeaderData(1, Qt.Horizontal, "Nombre")
-        modelo.setHeaderData(2, Qt.Horizontal, "Empleo")
-        modelo.setHeaderData(3, Qt.Horizontal, "Email")
+        # modelo = QSqlTableModel()
+        # modelo.setTable("contactos")
+        # modelo.select()
 
-        # configuramos la tabla
-        self.tabla.setModel(modelo)
-        self.tabla.resizeColumnsToContents()
-        # escondemos la primera columna
-        self.tabla.setColumnHidden(0, True)
+        # modelo.setHeaderData(0, Qt.Horizontal, "Id")
+        # modelo.setHeaderData(1, Qt.Horizontal, "Nombre")
+        # modelo.setHeaderData(2, Qt.Horizontal, "Empleo")
+        # modelo.setHeaderData(3, Qt.Horizontal, "Email")
+
+        # self.tabla.setModel(modelo)
+        # self.tabla.setColumnHidden(0, True)
+        # self.tabla.resizeColumnsToContents()
 
 
 if __name__ == '__main__':

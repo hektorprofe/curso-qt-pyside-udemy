@@ -152,7 +152,7 @@ color: black;
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QListWidget" name="list_EnProgreso">
+     <widget class="QListWidget" name="lista_EnProgreso">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -178,7 +178,13 @@ color: black;
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QListWidget" name="list_Pendientes">
+     <widget class="QListWidget" name="lista_Pendientes">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -212,7 +218,7 @@ color: black;
      </widget>
     </item>
     <item row="2" column="2">
-     <widget class="QListWidget" name="list_Completadas">
+     <widget class="QListWidget" name="lista_Completadas">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
