@@ -11,16 +11,12 @@ class Carta(QtWidgets.QLabel):
         self.nombre = nombre
         self.palo = palo
         self.visible = False
-
         self.imagen = QtGui.QPixmap(absPath("images/Reverso.png"))
         self.setPixmap(self.imagen)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # Fix Alpha
         self.setScaledContents(True)  # Escalar el pixmap al widget
-
         self.anchoBase = self.sizeHint().width()
         self.altoBase = self.sizeHint().height()
-
-        # grupo de animaciones
         self.animaciones = QtCore.QParallelAnimationGroup()
 
     def mostrar(self):
@@ -33,28 +29,26 @@ class Carta(QtWidgets.QLabel):
         self.setPixmap(self.imagen)
         self.visible = False
 
-    def sobreponer(self):
-        self.raise_()
+    def posicionar(self, x, y):
+        self.raise_()  # sobreponemos la carta
+        self.move(x, y)
 
-    def moverAnimado(self, x, y, duracion=1000, escalado=1):
-        mover = QtCore.QPropertyAnimation(self, b"pos")
-        mover.setEndValue(QtCore.QPoint(x, y))
-        mover.setDuration(duracion)
-        self.animaciones.addAnimation(mover)
-        escalar = QtCore.QPropertyAnimation(self, b"size")
-        escalar.setEndValue(QtCore.QSize(self.anchoBase * escalado, self.altoBase * escalado))
-        escalar.setDuration(duracion)
-        self.animaciones.addAnimation(escalar)
+    def mover(self, x, y, duracion=1000, escalado=1):
+        self.raise_()  # sobreponemos la carta
+        pos = QtCore.QPropertyAnimation(self, b"pos")
+        pos.setEndValue(QtCore.QPoint(x, y))
+        pos.setDuration(duracion)
+        self.animaciones.addAnimation(pos)
+        size = QtCore.QPropertyAnimation(self, b"size")
+        size.setEndValue(QtCore.QSize(self.anchoBase * escalado, self.altoBase * escalado))
+        size.setDuration(duracion)
+        self.animaciones.addAnimation(size)
         self.animaciones.start()
 
     def reestablecer(self):
         self.animaciones.stop()
         self.animaciones = QtCore.QParallelAnimationGroup()
         self.resize(self.anchoBase, self.altoBase)
-
-    def mousePressEvent(self, event):  # Debug
-        if self.visible:
-            print(f"{self.nombre} de {self.palo}")
 
 
 class Baraja(QtWidgets.QWidget):

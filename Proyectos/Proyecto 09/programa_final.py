@@ -1,9 +1,6 @@
 # Widget para gestionar barajas de cartas con animaciones
 # https://doc.qt.io/qtforpython/PySide6/QtCore/QPropertyAnimation.html
 
-# Juego Blackjack usando nuestro widget de barajas de cartas
-# https://en.wikipedia.org/wiki/Blackjack
-
 from PySide6 import QtCore, QtGui, QtWidgets
 from helpers import absPath
 import random
@@ -42,25 +39,27 @@ class Carta(QtWidgets.QLabel):
         self.setPixmap(self.imagen)
         self.visible = False
 
-    def sobreponer(self):
-        self.raise_()
+    def posicionar(self, x, y):
+        self.raise_()  # sobreponemos la carta
+        self.move(x, y)
 
-    def moverAnimado(self, x, y, duracion=1000, escalado=1):
+    def mover(self, x, y, duracion=1000, escalado=1):
         # Animación de movimiento
+        self.raise_()  # sobreponemos la carta
         # self.posAnim = QtCore.QPropertyAnimation(self, b"pos")
         # self.posAnim.setEndValue(QtCore.QPoint(x, y))
         # self.posAnim.setDuration(duracion * 1000)
         # self.posAnim.start()
-        mover = QtCore.QPropertyAnimation(self, b"pos")
-        mover.setEndValue(QtCore.QPoint(x, y))
-        mover.setDuration(duracion)
-        self.animaciones.addAnimation(mover)
+        pos = QtCore.QPropertyAnimation(self, b"pos")
+        pos.setEndValue(QtCore.QPoint(x, y))
+        pos.setDuration(duracion)
+        self.animaciones.addAnimation(pos)
 
         # Animación de reescalado
-        escalar = QtCore.QPropertyAnimation(self, b"size")
-        escalar.setEndValue(QtCore.QSize(self.anchoBase * escalado, self.altoBase * escalado))
-        escalar.setDuration(duracion)
-        self.animaciones.addAnimation(escalar)
+        size = QtCore.QPropertyAnimation(self, b"size")
+        size.setEndValue(QtCore.QSize(self.anchoBase * escalado, self.altoBase * escalado))
+        size.setDuration(duracion)
+        self.animaciones.addAnimation(size)
 
         # Iniciamos las animaciones
         self.animaciones.start()
@@ -119,38 +118,38 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.baraja = Baraja(self)
         self.setCentralWidget(self.baraja)
-        self.posicionarBaraja()
+        self.preparar()
 
         # Botones y señales
-        tomar = QtWidgets.QPushButton("Tomar carta", self)
-        tomar.move(365, 15)
-        tomar.clicked.connect(self.tomarCarta)
+        tomarBtn = QtWidgets.QPushButton("Tomar carta", self)
+        tomarBtn.move(365, 15)
+        tomarBtn.clicked.connect(self.tomar)
 
-        reiniciar = QtWidgets.QPushButton("Reiniciar juego", self)
-        reiniciar.move(250, 15)
-        reiniciar.clicked.connect(self.reiniciarJuego)
+        reiniciarBtn = QtWidgets.QPushButton("Reiniciar juego", self)
+        reiniciarBtn.move(250, 15)
+        reiniciarBtn.clicked.connect(self.reiniciar)
 
-    def posicionarBaraja(self):
+    def preparar(self):
         offset = 0
         for carta in self.baraja.cartas:
-            carta.move(40 + offset, 60 + offset)
-            carta.sobreponer()  # upd: traemos las cartas al frente por orden
+            carta.posicionar(40 + offset, 60 + offset)
             offset += 0.25
 
-    def tomarCarta(self):
+    def tomar(self):
         carta = self.baraja.extraer()
         if carta:
-            carta.moverAnimado(300, 110, 750, 0.75)
-            carta.sobreponer()  # raise trae al frente el widget
+            carta.mover(300, 110, 750, 0.75)
             carta.mostrar()
 
-    def reiniciarJuego(self):
+    def reiniciar(self):
         self.baraja.reiniciar()
-        self.posicionarBaraja()
+        self.preparar()
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+
+    # exec_() si PySide6 < 6.1.0 (pip install --upgrade pyside6)
+    sys.exit(app.exec())
