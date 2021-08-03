@@ -123,17 +123,14 @@ Los sistemas operativos Linux y MAC suelen tener Python instalado y ejecutar un 
 
 ## 2: Desarrollo de programas gráficos con Qt/PySide6
 
-### Proyecto planeado (básico): Ejemplo de CRUD
+Los proyectos los enseño a crear [en el curso de Udemy](https://www.hektorprofe.net/cupon/pyside) y son los siguientes:
 
-- Arquitectura Modelo Vista Controlador
-- Usar ORM Peewee
-
-### Proyecto planeado (avanzado): Reloj concurrente
-
-- Hilos y procesos
-- Usando un thread pool
-
-### Proyecto planeado (diseño): Interfaz animada
-
-- Menú desplegable con animaciones
-- Esconder bordes, etc
+* Editor de registros JSON y SQL con arquitectura Modelo-Vista
+* Gestor CRUD de registros SQL con formularios
+* Tablero Kanban en CSV con listas y un menú contextual
+* Calculadora generada dinámicamente
+* Gráficos dinámicos con PyQtGraph
+* Reportes en HTML/PDF con gráficos y tablas
+* Web scrapper concurrente usando PyQuery y QThreadPool
+* Widget para barajas de cartas con animaciones
+* Videojuego Blackjack usando el widget de barajas
