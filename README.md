@@ -1,6 +1,6 @@
 # Desarrollo de programas gráficos en Python con Qt/PySide6
 
-Bienvenido a mi curso sobre desarrollo de programas gráficos en Python con Qt y PySide. Si tienes conocimientos básicos sobre este lenguaje y te interesa añadir atractivas interfaces a tus scripts, [este curso](https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?referralCode=9EAE0CB94440E8F97435) es para ti.
+Bienvenido a mi curso sobre desarrollo de programas gráficos en Python con Qt y PySide. Si tienes conocimientos básicos sobre este lenguaje y te interesa añadir atractivas interfaces a tus scripts, [este curso](https://www.hektorprofe.net/cupon/pyside) es para ti.
 
 - A través de sencillos ejemplos te introduciré en el desarrollo de interfaces de forma progresiva.
 - Te enseñaré a utilizar los componentes gráficos esenciales y a organizarlos mediante diferentes tipos de layouts.
